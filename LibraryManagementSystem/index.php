@@ -13,23 +13,18 @@ require('dbconn.php');
 
 <body>
 
-<h1><b>The Library of Ohara</b></h1>
+<h1><img src="images/small_logo.png" alt="The Library of Ohara"></h1>
 
 <div class="container">
-
     <div class="login">
         <h2><b>Sign In</b></h2>
         <form action="index.php" method="post">
             <input type="text" Name="Personal_ID" placeholder="ID" required="">
             <input type="password" Name="Password" placeholder="Password" required="">
-
-
             <div class="send-button">
-                
                 <input type="submit" name="signin" ; value="Sign In">
         </form>
     </div>
-
     <div class="clear"></div>
 </div>
 
@@ -41,24 +36,19 @@ require('dbconn.php');
         <input type="password" Name="Password" placeholder="Password" required>
         <input type="text" Name="PhoneNumber" placeholder="Phone Number" required>
         <input type="text" Name="Personal_ID" placeholder="ID" required="">
-
         <select name="Gender" id="Gender">
             <option value="Male">Male</option>
             <option value="Female">Female</option>
         </select>
-
         <select name="Type" id="Type">
             <option value="Student">Student</option>
             <option value="Faculty Member">Faculty Member</option>
             <option value="Staff">Staff</option>
         </select>
-
         <br>
         <br>
-
         <div class="send-button">
             <input type="submit" name="signup" value="Sign Up">
-            
     </form>
 </div>
 <p>By creating an account, you agree to our Terms</a></p>

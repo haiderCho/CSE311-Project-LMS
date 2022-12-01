@@ -3,6 +3,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 0;
     border: 0;
     font-size: 100%;
+    color:#000;
     font: inherit;
     vertical-align: baseline;
 }
@@ -100,7 +101,7 @@ img {
 body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    background: url("../images/background.jpg");
+    background: rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -131,15 +132,15 @@ h1 {
     width: 50%;
     margin: 0 auto;
     padding: 40px;
-    background-color: rgba(10, 10, 10, 0.77);
-    border: 2px ridge rgba(238, 238, 238, 0.13);
+    background-color: rgba(255, 255, 255, 0.247);
+    border: 2px ridge rgba(209, 204, 255, 0.26);
     border-radius: 5px;
-    -moz-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
-    -webkit-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
-    box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
-    border-bottom: none;
-    border-bottom-left-radius: initial;
-    border-bottom-right-radius: initial;
+    -moz-box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.596);
+    -webkit-box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.596);
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.596);
+    border-bottom: 2px ridge rgba(0, 0, 0, 0.596);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .login {
@@ -150,19 +151,19 @@ h1 {
 }
 
 ::-webkit-input-placeholder {
-    color: #CCC;
+    color:#1e314b;
 }
 
 :-moz-placeholder {
-    color: #CCC;
+    color:#1e314b;
 }
 
 ::-moz-placeholder {
-    color: #CCC;
+    color: #1e314b;
 }
 
 :-ms-input-placeholder {
-    color: #CCC;
+    color:#1e314b;
 }
 
 h2 {
@@ -290,27 +291,19 @@ input[type="text"], input[type="password"] {
 
 .send-button input[type="submit"] {
     width: 60%;
-    padding: 10px 0;
-    font-size: 16px;
-    font-weight: 100;
-    background-color: transparent;
-    color: #CCC;
-    border: 1px solid rgba(238, 238, 238, 0.41);
-    border-width: thin;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    padding: 13px 0;
     cursor: pointer;
-    outline: none;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;
-    text-decoration: none;
+    background: #1e314b;
 }
 
-/*--w3layouts--*/
-/*--agileits--*/
 .send-button input[type="submit"]:hover {
-    background-color: #000;
+    background-color: rgb(0, 71, 30);
     border: 1px solid #FFF;
     color: #FFF;
     transition: 0.5s all;
@@ -322,28 +315,28 @@ input[type="text"], input[type="password"] {
 }
 
 .login a {
-    color: #CCC;
+    color: rgb(0, 0, 0);
 }
 
 .login a:hover {
-    color: #FFF;
+    color: rgb(0, 0, 0);
 }
 
 .register {
     width: 44%;
     float: left;
-    border-left: 1px solid #DDD;
+    border-left: 1px solid rgba(0, 0, 0, 0.575);
     padding-left: 40px;
     text-align: left;
 }
 
 .register p {
-    color: #CCC;
+    color: rgb(0, 0, 0);
     margin-bottom: 10px;
 }
 
 .register p a {
-    color: #CCC;
+    color: rgb(0, 0, 0);
 }
 
 .register p a:hover {
@@ -352,14 +345,12 @@ input[type="text"], input[type="password"] {
 
 .footer {
     text-align: center;
-    margin: 100px 20px 20px;
+    margin: 40px 20px 20px;
 }
 
 .footer p {
-    color: #CCC;
+    color: rgb(46, 46, 46);
     line-height: 25px;
-    /*--w3layouts--*/
-    /*--agileits--*/
 }
 
 .footer a {
@@ -370,12 +361,6 @@ input[type="text"], input[type="password"] {
 .footer a:hover {
     color: #FFF;
 }
-
-/*-- Index-Page-Styling --*/
-
-
-/*--- Responsive Code ---*/
-
 
 @media screen and (max-width: 1920px) {
     h1 {
@@ -403,9 +388,6 @@ input[type="text"], input[type="password"] {
     .container {
         width: 57%;
     }
-
-    /*--w3layouts--*/
-    /*--agileits--*/
 }
 
 @media screen and (max-width: 1280px) {
@@ -636,8 +618,4 @@ input[type="text"], input[type="password"] {
     text-align: center;
     background: transparent;
     border: transparent;
-
 }
-
-
-/*--- Responsive Code ---*/
