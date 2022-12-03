@@ -29,12 +29,13 @@ if ($_SESSION['Personal_ID']) {
                 <div class="nav-collapse collapse navbar-inverse-collapse">
                     <ul class="nav pull-right">
                         <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="images/user.png" class="nav-avatar"/>
+                                <img src="images/user.png" class="nav-avatar" alt=""/>
                                 <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="index.php">Your Profile</a></li>
                                 <!--li><a href="#">Edit Profile</a></li>
                                 <li><a href="#">Account Settings</a></li-->
+                                <li><a href="db_stats.php">Databse Stats</a></li>
                                 <li class="divider"></li>
                                 <li><a href="logout.php">Logout</a></li>
                             </ul>
@@ -93,14 +94,14 @@ if ($_SESSION['Personal_ID']) {
                                 $email = $row['EmailId'];
                                 $mobno = $row['MobNo'];
                                 ?>
-                                    <h1 class="card-title">
-                                        <center><?php echo $name ?></center>
-                                    </h1>
-                                    <br>
-                                    <p><b>Email ID: </b><?php echo $email ?></p>
-                                    <br>
-                                    <p><b>Mobile number: </b><?php echo $mobno ?></p>
-                                    </b>
+                                <h1 class="card-title">
+                                    <center><?php echo $name ?></center>
+                                </h1>
+                                <br>
+                                <p><b>Email ID: </b><?php echo $email ?></p>
+                                <br>
+                                <p><b>Mobile number: </b><?php echo $mobno ?></p>
+                                </b>
                             </div>
                         </div>
                         <br>

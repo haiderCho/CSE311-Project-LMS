@@ -3,7 +3,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 0;
     border: 0;
     font-size: 100%;
-    color:#000;
+    color: #000;
     font: inherit;
     vertical-align: baseline;
 }
@@ -101,7 +101,10 @@ img {
 body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    background: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+    background: #f0f2f5;
+    font-family: Arial, sans-serif;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -131,16 +134,22 @@ h1 {
 .container {
     width: 50%;
     margin: 0 auto;
-    padding: 40px;
+    margin-left: 500px;
+    padding: 15px;
     background-color: rgba(255, 255, 255, 0.247);
     border: 2px ridge rgba(209, 204, 255, 0.26);
     border-radius: 5px;
-    -moz-box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.596);
-    -webkit-box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.596);
-    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.596);
-    border-bottom: 2px ridge rgba(0, 0, 0, 0.596);
+    background: #fff;
+    box-shadow: 0px 5px 10px 3px rgba(71, 71, 71, 0.52);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+.title {
+    float: left;
+    margin-top: 150px;
+    margin-left: 100px;
+    text-align: center;
 }
 
 .login {
@@ -151,19 +160,19 @@ h1 {
 }
 
 ::-webkit-input-placeholder {
-    color:#1e314b;
+    color: #4a4a4a6a;
 }
 
 :-moz-placeholder {
-    color:#1e314b;
+    color: #4a4a4a6a;
 }
 
 ::-moz-placeholder {
-    color: #1e314b;
+    color: #4a4a4a6a;
 }
 
 :-ms-input-placeholder {
-    color:#1e314b;
+    color: #4a4a4a6a;
 }
 
 h2 {
@@ -280,13 +289,13 @@ input[type="text"], input[type="password"] {
     background-color: transparent;
     border: none;
     font-size: 15px;
-    border-bottom: 1px solid rgba(238, 238, 238, 0.41);
+    border-bottom: 1px solid rgba(65, 65, 65, 0.41);
     outline: none;
-    color: #FFF;
+    color: rgb(0, 0, 0);
 }
 
 .send-button {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .send-button input[type="submit"] {
@@ -297,16 +306,16 @@ input[type="text"], input[type="password"] {
     font-weight: 600;
     border-radius: 5px;
     -moz-box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.596);
-	-webkit-box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.596);
-	box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.596);
+    -webkit-box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.596);
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.596);
     border: none;
     padding: 13px 0;
     cursor: pointer;
-    background: #1e314b;
+    background: #005bdb;
 }
 
 .send-button input[type="submit"]:hover {
-    background-color: rgb(0, 71, 30);
+    background-color:#36a420;
     border: 0px solid #FFF;
     color: #FFF;
     transition: 0.5s all;
@@ -335,11 +344,18 @@ input[type="text"], input[type="password"] {
 
 .register p {
     color: rgb(0, 0, 0);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.register footer {
+    color: rgb(0, 0, 0);
+    font-size: 11px;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .register p a {
-    color: rgb(0, 0, 0);
+    color: rgb(5, 0, 71);
 }
 
 .register p a:hover {
@@ -348,7 +364,8 @@ input[type="text"], input[type="password"] {
 
 .footer {
     text-align: center;
-    margin: 40px 20px 20px;
+    margin-top: 20px;
+    margin-left: 500px;
 }
 
 .footer p {
@@ -484,7 +501,8 @@ input[type="text"], input[type="password"] {
     }
 
     .register p {
-        font-size: 13.2px;
+        font-size: 8px;
+        font-weight: 300;
     }
 }
 
@@ -573,7 +591,8 @@ input[type="text"], input[type="password"] {
     }
 
     .footer p {
-        font-size: 14px;
+        font-size: 10px;
+        font-weight: 200;
     }
 }
 
@@ -624,7 +643,8 @@ input[type="text"], input[type="password"] {
 }
 
 .title-box {
-    margin: 10;
+    margin-top: 70px;
+    margin-bottom: 25px;
     padding: 10;
     border: 10;
 }

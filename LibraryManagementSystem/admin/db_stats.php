@@ -35,6 +35,7 @@ if ($_SESSION['Personal_ID']) {
                                 <li><a href="index.php">Your Profile</a></li>
                                 <!--li><a href="#">Edit Profile</a></li>
                                 <li><a href="#">Account Settings</a></li-->
+                                <li><a href="db_stats.php">Databse Stats</a></li>
                                 <li class="divider"></li>
                                 <li><a href="logout.php">Logout</a></li>
                             </ul>
@@ -75,22 +76,53 @@ if ($_SESSION['Personal_ID']) {
                     <!--/.sidebar-->
                 </div>
                 <!--/.span3-->
+
                 <div class="span9">
-                    <div class="content">
-                        <div class="btn-controls">
-                            <div class="btn-box-row row-fluid">
-                                <a href="findbook.php" class="btn-box big span4"><i class=" icon-search"></i><b>Find
-                                        Book</b>
-                                </a><a href="findbookissue.php" class="btn-box big span4"><i class="icon-book"></i><b>Find
-                                        Book Issue</b>
-                                </a><a href="finduser.php" class="btn-box big span4"><i class="icon-user"></i><b>Find
-                                        User</b>
-                                </a>
-                            </div>
+                    <div class="module">
+                        <div class="module-head">
+                         <h3>Database Stats</h3>
                         </div>
-                        <!--/.module-->
+                        <div class="module-body">
+                        <?php
+                                $UserCountSQL = "SELECT * FROM LMS.user WHERE Personal_ID <> 'Admin'";
+                                if ($UserCount = mysqli_query($conn, $UserCountSQL)) {
+                                    $resultUserCount = mysqli_num_rows($UserCount);
+                                }
+                                echo "<b>Total User:</b> " . $resultUserCount . "<br><br>";
+
+                                $UserCountSQL = "SELECT * FROM LMS.user WHERE Type='Librarian' AND Personal_ID <> 'Admin'";
+                                if ($UserCount = mysqli_query($conn, $UserCountSQL)) {
+                                    $resultUserCount = mysqli_num_rows($UserCount);
+                                }
+                                echo "<b>Librarians:</b> " . $resultUserCount . "<br>";     
+
+                                $UserCountSQL = "SELECT * FROM LMS.user WHERE Type='Faculty Member' AND Personal_ID <> 'Admin'";
+                                if ($UserCount = mysqli_query($conn, $UserCountSQL)) {
+                                    $resultUserCount = mysqli_num_rows($UserCount);
+                                }
+                                echo "<b>Faculty Members:</b> " . $resultUserCount . "<br>";                               
+
+                                $UserCountSQL = "SELECT * FROM LMS.user WHERE Type='Staff' AND Personal_ID <> 'Admin'";
+                                if ($UserCount = mysqli_query($conn, $UserCountSQL)) {
+                                    $resultUserCount = mysqli_num_rows($UserCount);
+                                }
+                                echo "<b>Staffs:</b> " . $resultUserCount . "<br>";  
+
+                                $UserCountSQL = "SELECT * FROM LMS.user WHERE Type='Student' AND Personal_ID <> 'Admin'";
+                                if ($UserCount = mysqli_query($conn, $UserCountSQL)) {
+                                    $resultUserCount = mysqli_num_rows($UserCount);
+                                }
+                                echo "<b>Students:</b> " . $resultUserCount . "<br><br>";  
+
+
+                                $BookCountSQL = "SELECT * FROM LMS.book";
+                                if ($BookCount = mysqli_query($conn, $BookCountSQL)) {
+                                    $resultBookCount = mysqli_num_rows($BookCount);
+                                }
+                                echo "<b>Total Books:</b> " . $resultBookCount . "<br><br>";
+                                ?>
+                        </div>
                     </div>
-                    <!--/.content-->
                 </div>
                 <!--/.span9-->
             </div>
