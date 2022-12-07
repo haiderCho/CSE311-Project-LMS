@@ -12,7 +12,7 @@
 }
 
 #tables tr:nth-child(even) {
-    background-color: #fffff2;
+    background-color: #ffffff;
 }
 
 #tables tr:nth-child(odd) {
@@ -27,7 +27,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #020f88;
+    background-color: #030163;
     border-radius: 2px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -37,7 +37,7 @@
 body {
     font-size: 13px;
     font-family: 'Open Sans', Arial, sans-serif;
-    background: #fff;
+    background: #f0f2f5;
     border-radius: 4px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1123,9 +1123,9 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 }
 
 .widget-menu > li > a {
-    background-color: #2d2b32;
+    background-color: #ffffff;
     color: #767676;
-    box-shadow: 0px 2px 10px 1px rgba(71, 71, 71, 0.52);
+    box-shadow: 0px 2px 10px 1px rgba(219, 219, 219, 0.548);
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -2073,4 +2073,13 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
 .card-body b {
     color: rgb(0, 0, 0);
+}
+
+.easter-egg {
+margin-bottom: 0px;
+margin-left: 43%;
+}
+.easter-footer {
+    color: #999;
+    padding: 30px 0 60px
 }
