@@ -120,7 +120,7 @@ if ($_SESSION['Personal_ID']) {
                 </div>
             </div>
             <!--/.container-->
-        </div>
+        </div></div>
         <div class="footer">
             <div class="container">
                 <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.

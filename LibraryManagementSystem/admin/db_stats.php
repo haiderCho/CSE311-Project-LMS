@@ -128,8 +128,10 @@ if ($_SESSION['Personal_ID']) {
             </div>
         </div>
         <!--/.container-->
+         <img class="easter-egg" src="images/opsh9.png" alt="Card image cap">
     </div>
-    <div class="footer">
+   
+    <div class="easter-footer">
         <div class="container">
             <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
         </div>

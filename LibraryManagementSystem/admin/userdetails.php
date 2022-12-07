@@ -74,21 +74,60 @@ if ($_SESSION['Personal_ID']) {
                     </div>
                     <!--/.sidebar-->
                 </div>
-            </div>
-            <div class="footer">
-                <div class="container">
-                    <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
-                </div>
-            </div>
+                <!--/.span3-->
 
-            <!--/.wrapper-->
-            <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-            <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-            <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-            <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
-            <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
-            <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
-            <script src="scripts/common.js" type="text/javascript"></script>
+                <div class="span9">
+                    <div class="content">
+
+                        <div class="module">
+                            <div class="module-head">
+                                <h3>Client Details</h3>
+                            </div>
+                            <div class="module-body">
+                                <?php
+                                $p_ID = $_GET['id'];
+                                $sql = "select * from LMS.user where Personal_ID='$p_ID'";
+                                $result = $conn->query($sql);
+                                $row = $result->fetch_assoc();
+
+                                $name = $row['Name'];
+                                $Gender = $row['Gender'];
+                                $email = $row['EmailId'];
+                                $mobno = $row['MobNo'];
+
+
+                                echo "<b><u>Name:</u></b> " . $name . "<br><br>";
+                                echo "<b><u>Gender:</u></b> " . $Gender . "<br><br>";
+                                echo "<b><u>ID:</u></b> " . $p_ID . "<br><br>";
+                                echo "<b><u>Email Id:</u></b> " . $email . "<br><br>";
+                                echo "<b><u>Mobile No:</u></b> " . $mobno . "<br><br>";
+                                ?>
+
+                                <a href="users.php" class="btn btn-primary">Go Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.span9-->
+
+            </div>
+        </div>
+        <!--/.container-->
+    </div>
+    <div class="footer">
+        <div class="container">
+            <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
+        </div>
+    </div>
+
+    <!--/.wrapper-->
+    <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
+    <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
+    <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="scripts/common.js" type="text/javascript"></script>
 
     </body>
 

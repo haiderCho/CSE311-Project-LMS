@@ -74,23 +74,99 @@ if ($_SESSION['Personal_ID']) {
                     </div>
                     <!--/.sidebar-->
                 </div>
+                <!--/.span3-->
 
+                <div class="span9">
+            
+                    <form class="form-horizontal row-fluid" action="users.php" method="post">
+                        <div class="control-group">
+                            <label class="control-label" for="Search"><b>Search:</b></label>
+                            
+                            <div class="controls">
+                                <input type="text" id="title" name="title" placeholder="Enter Name/Personal ID"
+                                       class="span8" required>
+                                <button type="submit" name="submit" class="btn">Search</button>
+                            </div>
+                        </div>
+                    </form>
+        
+                    <br>
+                    <?php
+                    if (isset($_POST['submit'])) {
+                        $s = $_POST['title'];
+                        $sql = "select * from LMS.user where (Personal_ID='$s' or Name like '%$s%') and Personal_ID<>'ADMIN'";
+                    } else
+                        $sql = "select * from LMS.user where Personal_ID<>'ADMIN'";
+
+                    $result = $conn->query($sql);
+                    $rowcount = mysqli_num_rows($result);
+
+                    if (!($rowcount))
+                    echo "<br><center><h2><b><i>No Results</i></b></h2></center>";
+                    else
+                    {
+                    ?>
+                    <div class="module">
+                    <table class="table" id="tables">
+                        <thead>
+                        <tr>
+                            <th>Personal ID</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Type</th>                          
+                            <th>Email ID</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody></div>
+                        <?php
+
+                        //$result=$conn->query($sql);
+                        while ($row = $result->fetch_assoc()) {
+                            $Personal_ID = $row['Personal_ID'];
+                            $name = $row['Name'];
+                            $gender = $row['Gender'];
+                            $Type = $row['Type'];
+                            $email = $row['EmailId'];
+                            ?>
+                            <tr>
+                                <td><?php echo $Personal_ID ?></td>
+                                <td><?php echo $name ?></td>
+                                <td><?php echo $gender ?></td>
+                                <td><?php echo $Type ?></td>
+                                <td><?php echo $email ?></td>
+                                <td>
+                                    <center>
+                                        <a href="userdetails.php?id=<?php echo $Personal_ID; ?>"
+                                           class="btn btn-success">Details</a>
+                                        <!--a href="remove_user.php?id=<?php echo $Personal_ID; ?>" class="btn btn-danger">Remove</a-->
+                                    </center>
+                                </td>
+                            </tr>
+                        <?php }
+                        } ?>
+                        </tbody>
+                    </table>
+                </div>
+                <!--/.span9-->
             </div>
         </div>
-        <div class="footer">
-            <div class="container">
-                <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
-            </div>
+        <!--/.container-->
+    </div></div>
+    <div class="footer">
+        <div class="container">
+            <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
         </div>
+    </div>
 
-        <!--/.wrapper-->
-        <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-        <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
-        <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
-        <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
-        <script src="scripts/common.js" type="text/javascript"></script>
+    <!--/.wrapper-->
+    <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
+    <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
+    <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="scripts/common.js" type="text/javascript"></script>
 
     </body>
 

@@ -116,7 +116,7 @@ if ($_SESSION['Personal_ID']) {
     </div>
     <div class="footer">
         <div class="container">
-            <b class="copyright">&copy; 2022 Library Management System. </b>All rights reserved.
+            <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
         </div>
     </div>
 

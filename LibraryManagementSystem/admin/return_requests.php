@@ -74,22 +74,78 @@ if ($_SESSION['Personal_ID']) {
                     </div>
                     <!--/.sidebar-->
                 </div>
+                <div class="span9">
+                    <center>
+                        <a href="issue_requests.php" class="btn btn-info">Issue Requests</a>
+                        <a href="renew_requests.php" class="btn btn-info">Renew Request</a>
+                        <a href="return_requests.php" class="btn btn-info">Return Requests</a>
+                    </center>
+                    <h1><i>Return Requests</i></h1>
+                    <table class="table" id="tables">
+                        <thead>
+                        <tr>
+                            <th>Personal ID</th>
+                            <th>Book Id</th>
+                            <th>Book Name</th>
+                            <th>Dues</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        $sql = "select return.BookId,return.Personal_ID,Title,datediff(curdate(),Due_Date) as x from LMS.return,LMS.book,LMS.record where return.BookId=book.BookId and return.BookId=record.BookId and return.Personal_ID=record.Personal_ID";
+                        $result = $conn->query($sql);
+                        while ($row = $result->fetch_assoc()) {
+                            $bookid = $row['BookId'];
+                            $Personal_ID = $row['Personal_ID'];
+                            $name = $row['Title'];
+                            $dues = $row['x'];
 
-            </div>
-            <div class="footer">
-                <div class="container">
-                    <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
+
+                            ?>
+                            <tr>
+                                <td><?php echo strtoupper($Personal_ID) ?></td>
+                                <td><?php echo $bookid ?></td>
+                                <td><b><?php echo $name ?></b></td>
+                                <td><?php
+                                    if ($dues > 0)
+                                        echo $dues;
+                                    else
+                                        echo 0; ?></td>
+                                <td>
+                                    <center>
+
+                                        <a href="acceptreturn.php?id1=<?php echo $bookid; ?>&id2=<?php echo $Personal_ID; ?>&id3=<?php echo $dues ?>"
+                                           class="btn btn-success">Accept</a>
+
+                                        <!--a href="rejectreturn.php?id1=<?php echo $bookid; ?>&id2=<?php echo $Personal_ID; ?>" class="btn btn-danger">Reject</a-->
+                                    </center>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
                 </div>
+                <!--/.span3-->
+                <!--/.span9-->
             </div>
+        </div>
+        <!--/.container-->
+    </div>
+    <div class="footer">
+        <div class="container">
+            <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
+        </div>
+    </div>
 
-            <!--/.wrapper-->
-            <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-            <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-            <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-            <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
-            <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
-            <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
-            <script src="scripts/common.js" type="text/javascript"></script>
+    <!--/.wrapper-->
+    <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
+    <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
+    <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="scripts/common.js" type="text/javascript"></script>
 
     </body>
 
