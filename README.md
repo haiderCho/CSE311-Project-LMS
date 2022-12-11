@@ -12,6 +12,136 @@
 - Student: Borrow Book, Return Book
 
 
+## 🌲 Project tree
+```bash
+.
+├── Database
+│   ├── Control Flow.pdf
+│   ├── ERD.pdf
+│   ├── LMS.sql
+│   └── Relational Table.pdf
+├── LibraryManagementSystem
+│   ├── admin
+│   │   ├── bootstrap
+│   │   │   ├── css
+│   │   │   ├── img
+│   │   │   └── js
+│   │   ├── css
+│   │   │   └── theme.css
+│   │   ├── images
+│   │   │   ├──
+│   │   │   ├──
+│   │   │   └──
+│   │   ├── scripts
+│   │   │   ├── datatables
+│   │   │   ├── flot
+│   │   │   ├── common.js
+│   │   │   ├── jquery-1.9.1.min.js
+│   │   │   └── jquery-ui-1.10.1.custom.min.js
+│   │   ├── accept.php 
+│   │   ├── acceptrenewal.php 
+│   │   ├── acceptreturn.php 
+│   │   ├── addbook.php 
+│   │   ├── book.php 
+│   │   ├── bookdetails.php 
+│   │   ├── current.php 
+│   │   ├── db_stats.php 
+│   │   ├── dbconn.php 
+│   │   ├── edit_admin_details.php 
+│   │   ├── edit_book_details.php 
+│   │   ├── findbook.php 
+│   │   ├── findbookissue.php 
+│   │   ├── finduser.php 
+│   │   ├── index.php 
+│   │   ├── issue_requests.php 
+│   │   ├── logout.php 
+│   │   ├── message.php 
+│   │   ├── profile.php 
+│   │   ├── recommendations.php 
+│   │   ├── reject.php 
+│   │   ├── rejectrenewal.php 
+│   │   ├── remove_user.php 
+│   │   ├── renew_requests.php 
+│   │   ├── requests.php 
+│   │   ├── return_requests.php 
+│   │   ├── userdetails.php 
+│   │   └── users.php 
+│   ├── css
+│   │   └── style.css
+│   ├── images
+│   │   └── logo.png
+│   ├── staff
+│   │   ├── bootstrap
+│   │   │   ├── css
+│   │   │   ├── img
+│   │   │   ├── js
+│   │   ├── css
+│   │   │   └── theme.css
+│   │   ├── images
+│   │   │   ├──
+│   │   │   ├──
+│   │   │   ├──
+│   │   ├── scripts
+│   │   │   ├── datatables
+│   │   │   ├── flot
+│   │   │   ├── common.js
+│   │   │   ├── jquery-1.9.1.min.js
+│   │   │   └── jquery-ui-1.10.1.custom.min.js
+│   │   ├── book.php
+│   │   ├── bookdetails.php
+│   │   ├── current.php
+│   │   ├── dbconn.php
+│   │   ├── edit_student_details.php
+│   │   ├── findbook.php
+│   │   ├── history.php
+│   │   ├── index.php
+│   │   ├── issue_request.php
+│   │   ├── logout.php
+│   │   ├── message.php
+│   │   ├── profile.php
+│   │   ├── renew_request.php
+│   │   └── return_request.php
+│   ├── student
+│   │   ├── bootstrap
+│   │   │   ├── css
+│   │   │   ├── img
+│   │   │   ├── js
+│   │   ├── css
+│   │   │   ├── theme.css
+│   │   ├── images
+│   │   │   ├──
+│   │   │   ├──
+│   │   │   ├──
+│   │   ├── scripts
+│   │   │   ├── datatables
+│   │   │   ├── flot
+│   │   │   ├── common.js
+│   │   │   ├── jquery-1.9.1.min.js
+│   │   │   ├── jquery-ui-1.10.1.custom.min.js
+│   │   ├── book.php
+│   │   ├── bookdetails.php
+│   │   ├── current.php
+│   │   ├── dbconn.php
+│   │   ├── edit_student_details.php
+│   │   ├── findbook.php
+│   │   ├── history.php
+│   │   ├── index.php
+│   │   ├── issue_request.php
+│   │   ├── logout.php
+│   │   ├── message.php
+│   │   ├── profile.php
+│   │   ├── renew_request.php
+│   │   └── return_request.php
+│   ├── about.html
+│   ├── dbconn.php
+│   └── index.php
+├── Screenshots
+├── LICENSE
+└── README.md
+
+```
+
+
 ## ⚡ Run Locally
 
 Clone the project
