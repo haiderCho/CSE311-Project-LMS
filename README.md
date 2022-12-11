@@ -144,22 +144,22 @@
 
 ## ⚡ Run Locally
 
-Clone the project
+✂️ Clone the project
 ```bash
   git clone https://github.com/haiderCho/CSE311-Project-LMS
 ```
 
-Install dependencies
+⚙️ Install dependencies
 ```bash
-  install xampp 
+  install xampp
 ```
 
-Set the project directory
+📁 Set the project directory
 ```bash
   ..\xampp\htdocs\LibraryManagementSystem
 ```
 
-Start the server
+🖧 Set the Databse
 ```bash
   xampp > import > LMS.SQL 
 ```
