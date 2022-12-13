@@ -1,9 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #030423);
+    position: absolute;
+  }
+  .wrapper h1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 888;
+    text-transform: uppercase;
+  }
+  .wrapper bub {
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+  }
+  bub .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 20%;
+    right: 20%;
+  }
+  .wrapper bub:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+  .wrapper bub:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation: animate 10s linear infinite;
+  }
+  .wrapper bub:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    animation: animate 3s linear infinite;
+  }
+  .wrapper bub:nth-child(4) {
+    top: 66%;
+    left: 30%;
+    animation: animate 7s linear infinite;
+  }
+  .wrapper bub:nth-child(5) {
+    top: 90%;
+    left: 10%;
+    animation: animate 9s linear infinite;
+  }
+  .wrapper bub:nth-child(6) {
+    top: 30%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+  }
+  .wrapper bub:nth-child(7) {
+    top: 70%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+  .wrapper bub:nth-child(8) {
+    top: 75%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+  }
+  .wrapper bub:nth-child(9) {
+    top: 50%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+  }
+  .wrapper bub:nth-child(10) {
+    top: 45%;
+    left: 20%;
+    animation: animate 10s linear infinite;
+  }
+  .wrapper bub:nth-child(11) {
+    top: 10%;
+    left: 90%;
+    animation: animate 9s linear infinite;
+  }
+  .wrapper bub:nth-child(12) {
+    top: 20%;
+    left: 70%;
+    animation: animate 7s linear infinite;
+  }
+  .wrapper bub:nth-child(13) {
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+  .wrapper bub:nth-child(14) {
+    top: 60%;
+    left: 5%;
+    animation: animate 6s linear infinite;
+  }
+  .wrapper bub:nth-child(15) {
+    top: 90%;
+    left: 80%;
+    animation: animate 9s linear infinite;
+  }
+  @keyframes animate {
+    0% {
+      transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100% {
+      transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+  }
+  
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    color: #000;
+    color: rgb(255, 255, 255);
     font: inherit;
     vertical-align: baseline;
 }
@@ -92,19 +218,14 @@ nav.horizontal ul li {
 img {
     max-width: 100%;
 }
-
 /*-- Reset Code --*/
 
 
 /*-- Index-Page-Styling --*/
-
 body {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    background: #f0f2f5;
     font-family: Arial, sans-serif;
+    text-align: center;
+    background: #0c0218;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -134,21 +255,73 @@ h1 {
 .container {
     width: 50%;
     margin: 0 auto;
-    margin-left: 500px;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.247);
-    border: 2px ridge rgba(209, 204, 255, 0.26);
+    padding: 35px;
+
+    background: linear-gradient(270deg, #0000004f, #1c00384f);
+    border: 2px ridge #00000033;
     border-radius: 5px;
-    background: #fff;
-    box-shadow: 0px 5px 10px 3px rgba(71, 71, 71, 0.52);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    -moz-box-shadow: 0px 2px 10px 1px #7e0fff;
+    -webkit-box-shadow: 0px 2px 10px 1px #7e0fff;
+    box-shadow: 0px 2px 10px 1px #7e0fff;
+/* 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.7px);
+    -webkit-backdrop-filter: blur(1.7px);
+    border: 1px solid rgba(255, 255, 255, 0.3); */
+
+    /* border: 3px ridge rgba(238, 238, 238, 0.13);
+    border-radius: 5px;
+    -moz-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+    -webkit-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+    box-shadow: 0px 2px 10px 1px rgba(44, 44, 44, 0.52); */
 }
 
+container:after {
+    position: absolute;
+    content: "";
+    top: 5vw;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.75);
+    -webkit-filter: blur(5vw);
+    -moz-filter: blur(5vw);
+    -ms-filter: blur(5vw);
+    filter: blur(5vw);
+    background: linear-gradient(270deg, #0fffc1, #7e0fff);
+    background-size: 200% 200%;
+    animation: animateGlow 10s ease infinite;
+  }
+  @keyframes animateGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes textColor {
+    0% {
+      color: #1a0033;
+    }
+    50% {
+      color: #003333;
+    }
+    100% {
+      color: #000033;
+    }
+  }
+
 .title {
-    float: left;
-    margin-top: 150px;
-    margin-left: 100px;
+    float: top;
+    margin-top: 1%;
+    margin-bottom: 1%;
     text-align: center;
 }
 
@@ -160,19 +333,19 @@ h1 {
 }
 
 ::-webkit-input-placeholder {
-    color: #4a4a4a6a;
+    color: #ffffff;
 }
 
 :-moz-placeholder {
-    color: #4a4a4a6a;
+    color: #ffffff;
 }
 
 ::-moz-placeholder {
-    color: #4a4a4a6a;
+    color: #ffffff;
 }
 
 :-ms-input-placeholder {
-    color: #4a4a4a6a;
+    color: #ffffff;
 }
 
 h2 {
@@ -182,6 +355,18 @@ h2 {
     font-weight: 100;
     margin-bottom: 20px;
 }
+
+ht {
+    text-shadow: 0px 2px 10px 1px #3e3d3f;
+    animation: textColor 10s ease infinite;
+    font-family: Georgia, serif;
+    font-size: 4vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+}
+
 
 ul.tick {
     tfloat: left;
@@ -289,7 +474,7 @@ input[type="text"], input[type="password"] {
     background-color: transparent;
     border: none;
     font-size: 15px;
-    border-bottom: 1px solid rgba(65, 65, 65, 0.41);
+    border-bottom: 1px solid rgba(165, 165, 165, 0.527);
     outline: none;
     color: rgb(0, 0, 0);
 }
@@ -311,13 +496,13 @@ input[type="text"], input[type="password"] {
     border: none;
     padding: 13px 0;
     cursor: pointer;
-    background: #005bdb;
+    background: linear-gradient(270deg, #000000bb, #1c0038bb);
 }
 
 .send-button input[type="submit"]:hover {
-    background-color:#36a420;
+    background-color:  #14921b;
     border: 0px solid #FFF;
-    color: #FFF;
+    color: rgb(255, 255, 255);
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -337,18 +522,18 @@ input[type="text"], input[type="password"] {
 .register {
     width: 44%;
     float: left;
-    border-left: 1px solid rgba(0, 0, 0, 0.575);
+    border-left: 1px solid rgba(255, 255, 255, 0.575);
     padding-left: 40px;
     text-align: left;
 }
 
 .register p {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin-bottom: 5px;
 }
 
 .register footer {
-    color: rgb(0, 0, 0);
+    color: rgb(224, 224, 224);
     font-size: 11px;
     font-weight: 500;
     margin-bottom: 5px;
@@ -364,22 +549,21 @@ input[type="text"], input[type="password"] {
 
 .footer {
     text-align: center;
-    margin-top: 20px;
-    margin-left: 500px;
+    margin-top: 15px;
 }
 
 .footer p {
-    color: rgb(46, 46, 46);
+    color: rgb(233, 233, 233);
     line-height: 25px;
 }
 
 .footer a {
-    color: #CCC;
+    color: rgb(6, 0, 56);
     text-decoration: none;
 }
 
 .footer a:hover {
-    color: #FFF;
+    color: rgb(0, 4, 255);
 }
 
 @media screen and (max-width: 1920px) {
@@ -640,11 +824,4 @@ input[type="text"], input[type="password"] {
     text-align: center;
     background: transparent;
     border: transparent;
-}
-
-.title-box {
-    margin-top: 70px;
-    margin-bottom: 25px;
-    padding: 10;
-    border: 10;
 }

@@ -12,14 +12,16 @@ require('dbconn.php');
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
     <!-- /Fonts -->
     <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 </head>
 
 <!-- Body -->
 <body>
+<div class="wrapper">
 
-<!-- <h2></h2> -->
-<div class="title-box"></div>
-<div class="title"><img src="images/logo.png" alt="The Library of Ohara"></div>
+<ht>The Library of Ohara</ht>
 <div class="container">
     <div class="login">
         <h2><b>Sign In</b></h2>
@@ -68,7 +70,16 @@ require('dbconn.php');
     <p> &copy; 2022 Ohara Library Management System. All Rights Reserved.</a></p>
     <p><a class="underline" href="about.html"><b>About the Project.</b></a></p>
 </div>
+    
+      <bub><span class="dot"></span></bub>
+      <bub><span class="dot"></span></bub>
+      <bub><span class="dot"></span></bub>
+      <bub><span class="dot"></span></bub>
+      <bub><span class="dot"></span></bub>
+      <bub><span class="dot"></span></bub>
+      <bub><span class="dot"></span></bub>
 
+</div>
 <?php
 if (isset($_POST['signin'])) {
     $u = $_POST['Personal_ID'];
@@ -90,11 +101,9 @@ if (isset($_POST['signin'])) {
             header('location:staff/index.php');
         else
             header('location:student/index.php');
-
     } else {
         echo "<script type='text/javascript'>alert('Failed to Login! Incorrect Personal ID or Password')</script>";
     }
-
 }
 
 if (isset($_POST['signup'])) {
@@ -116,6 +125,7 @@ if (isset($_POST['signup'])) {
     }
 }
 ?>
+
 </body>
 <!-- //Body -->
 </html>
