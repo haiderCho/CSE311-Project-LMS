@@ -40,13 +40,11 @@ if ($_SESSION['Personal_ID']) {
                             </ul>
                         </li>
                     </ul>
-                </div>
-                <!-- /.nav-collapse -->
+                </div><!-- /.nav-collapse -->
             </div>
-        </div>
-        <!-- /navbar-inner -->
-    </div>
-    <!-- /navbar -->
+        </div><!-- /navbar-inner -->
+    </div><!-- /navbar -->
+
     <div class="wrapper">
         <div class="container">
             <div class="row">
@@ -71,10 +69,8 @@ if ($_SESSION['Personal_ID']) {
                         <ul class="widget widget-menu unstyled">
                             <li><a href="logout.php"><i class="menu-icon icon-signout"></i>Logout </a></li>
                         </ul>
-                    </div>
-                    <!--/.sidebar-->
-                </div>
-                <!--/.span3-->
+                    </div><!--/.sidebar-->
+                </div><!--/.span3-->
 
                 <div class="span9">
                     <form class="form-horizontal row-fluid" action="current.php" method="post">
@@ -98,11 +94,9 @@ if ($_SESSION['Personal_ID']) {
                     $rowcount = mysqli_num_rows($result);
 
                     if (!($rowcount))
-                    echo "<br><center><h2><b><i>No Results</i></b></h2></center>";
+                    echo "<br><h2><b><i>No Results</i></b></h2>";
                     else
                     {
-
-
                     ?>
                     <table class="table" id="tables">
                         <thead>
@@ -119,7 +113,6 @@ if ($_SESSION['Personal_ID']) {
 
                         <?php
 
-
                         //$result=$conn->query($sql);
                         while ($row = $result->fetch_assoc()) {
                             $Personal_ID = $row['Personal_ID'];
@@ -128,7 +121,6 @@ if ($_SESSION['Personal_ID']) {
                             $issuedate = $row['Date_of_Issue'];
                             $duedate = $row['Due_Date'];
                             $dues = $row['x'];
-
                             ?>
 
                             <tr>
@@ -147,20 +139,17 @@ if ($_SESSION['Personal_ID']) {
                         } ?>
                         </tbody>
                     </table>
-                </div>
-
-                <!--/.span9-->
+                </div><!--/.span9-->
             </div>
-        </div>
-        <!--/.container-->
-    </div>
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
     <div class="footer">
         <div class="container">
             <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
         </div>
     </div>
 
-    <!--/.wrapper-->
     <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
     <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -170,9 +159,7 @@ if ($_SESSION['Personal_ID']) {
     <script src="scripts/common.js" type="text/javascript"></script>
 
     </body>
-
     </html>
-
 
 <?php } else {
     echo "<script type='text/javascript'>alert('Access Denied!!!')</script>";

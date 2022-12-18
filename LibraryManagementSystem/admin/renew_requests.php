@@ -40,13 +40,11 @@ if ($_SESSION['Personal_ID']) {
                             </ul>
                         </li>
                     </ul>
-                </div>
-                <!-- /.nav-collapse -->
+                </div><!-- /.nav-collapse -->
             </div>
-        </div>
-        <!-- /navbar-inner -->
-    </div>
-    <!-- /navbar -->
+        </div><!-- /navbar-inner -->
+    </div><!-- /navbar -->
+
     <div class="wrapper">
         <div class="container">
             <div class="row">
@@ -71,8 +69,7 @@ if ($_SESSION['Personal_ID']) {
                         <ul class="widget widget-menu unstyled">
                             <li><a href="logout.php"><i class="menu-icon icon-signout"></i>Logout </a></li>
                         </ul>
-                    </div>
-                    <!--/.sidebar-->
+                    </div><!--/.sidebar-->
                 </div>
                 <div class="span9">
                     <center>
@@ -101,7 +98,6 @@ if ($_SESSION['Personal_ID']) {
                             $name = $row['Title'];
                             $renewals = $row['Renewals_left'];
 
-
                             ?>
                             <tr>
                                 <td><?php echo strtoupper($Personal_ID) ?></td>
@@ -122,20 +118,17 @@ if ($_SESSION['Personal_ID']) {
                         <?php } ?>
                         </tbody>
                     </table>
-                </div>
-                <!--/.span3-->
-                <!--/.span9-->
-            </div>
-        </div>
-        <!--/.container-->
-    </div>
+                </div><!--/.span3-->
+            </div><!--/.span9-->
+        </div><!--/.container-->
+    </div>  <!--/.wrapper-->
+
     <div class="footer">
         <div class="container">
             <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
         </div>
     </div>
 
-    <!--/.wrapper-->
     <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
     <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -145,9 +138,7 @@ if ($_SESSION['Personal_ID']) {
     <script src="scripts/common.js" type="text/javascript"></script>
 
     </body>
-
     </html>
-
 
 <?php } else {
     echo "<script type='text/javascript'>alert('Access Denied!!!')</script>";

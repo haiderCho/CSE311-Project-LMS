@@ -40,13 +40,10 @@ if ($_SESSION['Personal_ID']) {
                             </ul>
                         </li>
                     </ul>
-                </div>
-                <!-- /.nav-collapse -->
+                </div><!-- /.nav-collapse -->
             </div>
-        </div>
-        <!-- /navbar-inner -->
-    </div>
-    <!-- /navbar -->
+        </div><!-- /navbar-inner -->
+    </div><!-- /navbar -->
     <div class="wrapper">
         <div class="container">
             <div class="row">
@@ -71,8 +68,7 @@ if ($_SESSION['Personal_ID']) {
                         <ul class="widget widget-menu unstyled">
                             <li><a href="logout.php"><i class="menu-icon icon-signout"></i>Logout </a></li>
                         </ul>
-                    </div>
-                    <!--/.sidebar-->
+                    </div><!--/.sidebar-->
                 </div>
                 <div class="span9">
                     <center>
@@ -80,65 +76,62 @@ if ($_SESSION['Personal_ID']) {
                         <a href="renew_requests.php" class="btn btn-info">Renew Request</a>
                         <a href="return_requests.php" class="btn btn-info">Return Requests</a>
                     </center>
-                    
+
                     <h1><b>Issue Requests</b></h1>
 
                     <div class="module">
-                    <table class="table" id="tables">
-                        <thead>
-                        <tr>
-                            <th>Personal ID</th>
-                            <th>Book Id</th>
-                            <th>Book Name</th>
-                            <th>Availabilty</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        </div>
-                        <?php
-                        $sql = "select * from LMS.record,LMS.book where Date_of_Issue is NULL and record.BookId=book.BookId order by Time";
-                        $result = $conn->query($sql);
-                        while ($row = $result->fetch_assoc()) {
-                            $bookid = $row['BookId'];
-                            $Personal_ID = $row['Personal_ID'];
-                            $name = $row['Title'];
-                            $avail = $row['Availability'];
-                            ?>
+                        <table class="table" id="tables">
+                            <thead>
                             <tr>
-                                <td><?php echo strtoupper($Personal_ID) ?></td>
-                                <td><?php echo $bookid ?></td>
-                                <td><b><?php echo $name ?></b></td>
-                                <td><?php echo $avail ?></td>
-                                <td>
-                                    <center>
-                                        <?php
-                                        if ($avail > 0) {
-                                            echo "<a href=\"accept.php?id1=" . $bookid . "&id2=" . $Personal_ID . "\" class=\"btn btn-success\">Accept</a>";
-                                        }
-                                        ?>
-                                        <a href="reject.php?id1=<?php echo $bookid ?>&id2=<?php echo $Personal_ID ?>"
-                                           class="btn btn-danger">Reject</a>
-                                    </center>
-                                </td>
+                                <th>Personal ID</th>
+                                <th>Book Id</th>
+                                <th>Book Name</th>
+                                <th>Availabilty</th>
+                                <th></th>
                             </tr>
-                        <?php } ?>
-                        </tbody>
+                            </thead>
+                            <tbody>
+                    </div>
+                    <?php
+                    $sql = "select * from LMS.record,LMS.book where Date_of_Issue is NULL and record.BookId=book.BookId order by Time";
+                    $result = $conn->query($sql);
+                    while ($row = $result->fetch_assoc()) {
+                        $bookid = $row['BookId'];
+                        $Personal_ID = $row['Personal_ID'];
+                        $name = $row['Title'];
+                        $avail = $row['Availability'];
+                        ?>
+                        <tr>
+                            <td><?php echo strtoupper($Personal_ID) ?></td>
+                            <td><?php echo $bookid ?></td>
+                            <td><b><?php echo $name ?></b></td>
+                            <td><?php echo $avail ?></td>
+                            <td>
+                                <center>
+                                    <?php
+                                    if ($avail > 0) {
+                                        echo "<a href=\"accept.php?id1=" . $bookid . "&id2=" . $Personal_ID . "\" class=\"btn btn-success\">Accept</a>";
+                                    }
+                                    ?>
+                                    <a href="reject.php?id1=<?php echo $bookid ?>&id2=<?php echo $Personal_ID ?>"
+                                       class="btn btn-danger">Reject</a>
+                                </center>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
                     </table>
-                </div>
-                <!--/.span3-->
-                <!--/.span9-->
-            </div>
-        </div>
-        <!--/.container-->
-    </div>
+                </div><!--/.span3-->
+            </div><!--/.span9-->
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
     <div class="footer">
         <div class="container">
             <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
         </div>
     </div>
 
-    <!--/.wrapper-->
     <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
     <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -148,9 +141,7 @@ if ($_SESSION['Personal_ID']) {
     <script src="scripts/common.js" type="text/javascript"></script>
 
     </body>
-
     </html>
-
 
 <?php } else {
     echo "<script type='text/javascript'>alert('Access Denied!!!')</script>";

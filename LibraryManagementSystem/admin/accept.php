@@ -39,7 +39,6 @@ if ($Type == 'Faculty Member' || $Type == 'Staff') {
     } else {
         echo "<script type='text/javascript'>alert('Error')</script>";
         header("Refresh:1; url=issue_requests.php", true, 303);
-
     }
 }
 ?>

@@ -11,7 +11,6 @@ $row = $result->fetch_assoc();
 
 $Gender = $row['Gender'];
 
-
 $sql1 = "update LMS.record set Date_of_Return=curdate(),Dues='$dues' where BookId='$bookid' and Personal_ID='$Personal_ID'";
 
 if ($conn->query($sql1) === TRUE) {
@@ -28,8 +27,5 @@ if ($conn->query($sql1) === TRUE) {
 } else {
     echo "<script type='text/javascript'>alert('Error')</script>";
     header("Refresh:1; url=return_requests.php", true, 303);
-
 }
-
-
 ?>

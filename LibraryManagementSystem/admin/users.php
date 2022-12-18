@@ -40,13 +40,11 @@ if ($_SESSION['Personal_ID']) {
                             </ul>
                         </li>
                     </ul>
-                </div>
-                <!-- /.nav-collapse -->
+                </div><!-- /.nav-collapse -->
             </div>
-        </div>
-        <!-- /navbar-inner -->
-    </div>
-    <!-- /navbar -->
+        </div><!-- /navbar-inner -->
+    </div><!-- /navbar -->
+
     <div class="wrapper">
         <div class="container">
             <div class="row">
@@ -71,17 +69,15 @@ if ($_SESSION['Personal_ID']) {
                         <ul class="widget widget-menu unstyled">
                             <li><a href="logout.php"><i class="menu-icon icon-signout"></i>Logout </a></li>
                         </ul>
-                    </div>
-                    <!--/.sidebar-->
-                </div>
-                <!--/.span3-->
+                    </div><!--/.sidebar-->
+                </div><!--/.span3-->
 
                 <div class="span9">
-            
+
                     <form class="form-horizontal row-fluid" action="users.php" method="post">
                         <div class="control-group">
                             <label class="control-label" for="Search"><b>Search:</b></label>
-                            
+
                             <div class="controls">
                                 <input type="text" id="title" name="title" placeholder="Enter Name/Personal ID"
                                        class="span8" required>
@@ -89,7 +85,7 @@ if ($_SESSION['Personal_ID']) {
                             </div>
                         </div>
                     </form>
-        
+
                     <br>
                     <?php
                     if (isset($_POST['submit'])) {
@@ -102,23 +98,23 @@ if ($_SESSION['Personal_ID']) {
                     $rowcount = mysqli_num_rows($result);
 
                     if (!($rowcount))
-                    echo "<br><center><h2><b><i>No Results</i></b></h2></center>";
-                    else
-                    {
-                    ?>
-                    <div class="module">
-                    <table class="table" id="tables">
-                        <thead>
-                        <tr>
-                            <th>Personal ID</th>
-                            <th>Name</th>
-                            <th>Gender</th>
-                            <th>Type</th>                          
-                            <th>Email ID</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody></div>
+                        echo "<br><center><h2><b><i>No Results</i></b></h2></center>";
+                    else {
+                        ?>
+                        <div class="module">
+                            <table class="table" id="tables">
+                                <thead>
+                                <tr>
+                                    <th>Personal ID</th>
+                                    <th>Name</th>
+                                    <th>Gender</th>
+                                    <th>Type</th>
+                                    <th>Email ID</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                        </div>
                         <?php
 
                         //$result=$conn->query($sql);
@@ -144,22 +140,20 @@ if ($_SESSION['Personal_ID']) {
                                 </td>
                             </tr>
                         <?php }
-                        } ?>
-                        </tbody>
+                    } ?>
+                    </tbody>
                     </table>
-                </div>
-                <!--/.span9-->
+                </div><!--/.span9-->
             </div>
-        </div>
-        <!--/.container-->
-    </div></div>
+        </div><!--/.container-->
+    </div>
+    </div><!--/.wrapper-->
     <div class="footer">
         <div class="container">
             <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
         </div>
     </div>
 
-    <!--/.wrapper-->
     <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
     <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -169,9 +163,7 @@ if ($_SESSION['Personal_ID']) {
     <script src="scripts/common.js" type="text/javascript"></script>
 
     </body>
-
     </html>
-
 
 <?php } else {
     echo "<script type='text/javascript'>alert('Access Denied!!!')</script>";

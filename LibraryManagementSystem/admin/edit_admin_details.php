@@ -41,13 +41,11 @@ if ($_SESSION['Personal_ID']) {
                             </ul>
                         </li>
                     </ul>
-                </div>
-                <!-- /.nav-collapse -->
+                </div><!-- /.nav-collapse -->
             </div>
-        </div>
-        <!-- /navbar-inner -->
-    </div>
-    <!-- /navbar -->
+        </div><!-- /navbar-inner -->
+    </div><!-- /navbar -->
+
     <div class="wrapper">
         <div class="container">
             <div class="row">
@@ -72,10 +70,8 @@ if ($_SESSION['Personal_ID']) {
                         <ul class="widget widget-menu unstyled">
                             <li><a href="logout.php"><i class="menu-icon icon-signout"></i>Logout </a></li>
                         </ul>
-                    </div>
-                    <!--/.sidebar-->
-                </div>
-                <!--/.span3-->
+                    </div><!--/.sidebar-->
+                </div><!--/.span3-->
 
                 <div class="span9">
                     <div class="module">
@@ -143,20 +139,17 @@ if ($_SESSION['Personal_ID']) {
 
                         </div>
                     </div>
-                </div>
-
-                <!--/.span9-->
+                </div><!--/.span9-->
             </div>
-        </div>
-        <!--/.container-->
-    </div>
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
     <div class="footer">
         <div class="container">
             <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
         </div>
     </div>
 
-    <!--/.wrapper-->
     <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
     <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -175,20 +168,18 @@ if ($_SESSION['Personal_ID']) {
 
         $sql1 = "update LMS.user set Name='$name', EmailId='$email', MobNo='$mobno', Password='$pswd' where Personal_ID='$Personal_ID'";
 
-
         if ($conn->query($sql1) === TRUE) {
             echo "<script type='text/javascript'>alert('Success')</script>";
             header("Refresh:0.01; url=index.php", true, 303);
-        } else {//echo $conn->error;
+        } else {
+            //echo $conn->error;
             echo "<script type='text/javascript'>alert('Error')</script>";
         }
     }
     ?>
 
     </body>
-
     </html>
-
 
 <?php } else {
     echo "<script type='text/javascript'>alert('Access Denied!!!')</script>";

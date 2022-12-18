@@ -10,7 +10,6 @@ $row = $result->fetch_assoc();
 
 $Type = $row['Type'];
 
-
 if ($Type == 'Faculty Member' || $Type == 'Staff') {
     $sql1 = "update LMS.record set Due_Date=date_add(Due_Date,interval 60 day),Renewals_left=0 where BookId='$bookid' and Personal_ID='$Personal_ID'";
 
@@ -25,7 +24,6 @@ if ($Type == 'Faculty Member' || $Type == 'Staff') {
     } else {
         echo "<script type='text/javascript'>alert('Error')</script>";
         header("Refresh:0.01; url=renew_requests.php", true, 303);
-
     }
 } else {
     $sql2 = "update LMS.record set Due_Date=date_add(Due_Date,interval 180 day),Renewals_left=0 where BookId='$bookid' and Personal_ID='$Personal_ID'";
@@ -40,9 +38,6 @@ if ($Type == 'Faculty Member' || $Type == 'Staff') {
     } else {
         echo "<script type='text/javascript'>alert('Error')</script>";
         header("Refresh:0.01; url=renew_requests.php", true, 303);
-
     }
 }
-
-
 ?>

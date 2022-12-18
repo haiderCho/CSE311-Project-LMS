@@ -2,7 +2,6 @@
 require('dbconn.php');
 
 $bookid = $_GET['id1'];
-
 $Personal_ID = $_GET['id2'];
 
 $sql = "delete from LMS.record where Personal_ID='$Personal_ID' and BookId='$bookid'";
@@ -15,8 +14,5 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "<script type='text/javascript'>alert('Error')</script>";
     header("Refresh:0.01; url=issue_requests.php", true, 303);
-
 }
-
-
 ?>

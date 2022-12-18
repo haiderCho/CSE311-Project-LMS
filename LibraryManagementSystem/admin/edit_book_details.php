@@ -21,6 +21,7 @@ if ($_SESSION['Personal_ID']) {
         <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
               rel='stylesheet'>
     </head>
+
     <body>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
@@ -41,13 +42,10 @@ if ($_SESSION['Personal_ID']) {
                             </ul>
                         </li>
                     </ul>
-                </div>
-                <!-- /.nav-collapse -->
+                </div><!-- /.nav-collapse -->
             </div>
-        </div>
-        <!-- /navbar-inner -->
-    </div>
-    <!-- /navbar -->
+        </div><!-- /navbar-inner -->
+    </div><!-- /navbar -->
     <div class="wrapper">
         <div class="container">
             <div class="row">
@@ -72,10 +70,8 @@ if ($_SESSION['Personal_ID']) {
                         <ul class="widget widget-menu unstyled">
                             <li><a href="logout.php"><i class="menu-icon icon-signout"></i>Logout </a></li>
                         </ul>
-                    </div>
-                    <!--/.sidebar-->
-                </div>
-                <!--/.span3-->
+                    </div><!--/.sidebar-->
+                </div><!--/.span3-->
 
                 <div class="span9">
                     <div class="module">
@@ -116,19 +112,19 @@ if ($_SESSION['Personal_ID']) {
                                     <b>
                                         <label class="control-label" for="Genre">Genre:</label></b>
                                     <div class="controls">
-                                    <select name="Genre" id="Genre">
-                                        <option value="<?php echo $Genre?>"><?php echo $Genre ?> </option>
-                                        <option value="Action and Adventure">Action and Adventure</option>
-                                        <option value="Detective and Mystery">Detective and Mystery</option>
-                                        <option value="Fantasy">Fantasy</option>
-                                        <option value="Historical Fiction">Historical Fiction</option>
-                                        <option value="Horror">Horror</option>
-                                        <option value="Memoir & Autobiography">Memoir & Autobiography</option>
-                                        <option value="Novel">Novel</option>
-                                        <option value="Psychological Fiction">Psychological Fiction</option>
-                                        <option value="Romance">Romance</option>
-                                        <option value="Sci-Fi">Science Fiction</option>
-                                        <option value="True Crime">True Crime</option>
+                                        <select name="Genre" id="Genre">
+                                            <option value="<?php echo $Genre ?>"><?php echo $Genre ?> </option>
+                                            <option value="Action and Adventure">Action and Adventure</option>
+                                            <option value="Detective and Mystery">Detective and Mystery</option>
+                                            <option value="Fantasy">Fantasy</option>
+                                            <option value="Historical Fiction">Historical Fiction</option>
+                                            <option value="Horror">Horror</option>
+                                            <option value="Memoir & Autobiography">Memoir & Autobiography</option>
+                                            <option value="Novel">Novel</option>
+                                            <option value="Psychological Fiction">Psychological Fiction</option>
+                                            <option value="Romance">Romance</option>
+                                            <option value="Sci-Fi">Science Fiction</option>
+                                            <option value="True Crime">True Crime</option>
                                         </select>
                                     </div>
                                 </div>
@@ -160,20 +156,17 @@ if ($_SESSION['Personal_ID']) {
                             </form>
                         </div>
                     </div>
-                </div>
-
-                <!--/.span9-->
+                </div><!--/.span9-->
             </div>
-        </div>
-        <!--/.container-->
-    </div>
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
     <div class="footer">
         <div class="container">
             <b class="copyright">&copy; 2022 Ohara Library Management System </b>All rights reserved.
         </div>
     </div>
 
-    <!--/.wrapper-->
     <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
     <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -192,16 +185,16 @@ if ($_SESSION['Personal_ID']) {
         // $genre=$_POST['Genre'];
 
         $sql1 = "update LMS.book set Title='$name', Genre='$Genre', Year='$year', Availability='$avail' where BookId='$bookid'";
-// $sql2="update LMS.genre set Genre='$genre' where BookId='$bookid'";
+        // $sql2="update LMS.genre set Genre='$genre' where BookId='$bookid'";
 
         if ($conn->query($sql1) && $conn->query(sql2) === TRUE) {
             echo "<script type='text/javascript'>alert('Success')</script>";
             header("Refresh:0.01; url=book.php", true, 303);
-        } else {//echo $conn->error;
+        } else {
+            //echo $conn->error;
             echo "<script type='text/javascript'>alert('Error')</script>";
         }
     }
-
     ?>
     </body>
     </html>

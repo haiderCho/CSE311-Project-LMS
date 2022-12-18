@@ -71,23 +71,17 @@ if ($_SESSION['Personal_ID']) {
                         <ul class="widget widget-menu unstyled">
                             <li><a href="logout.php"><i class="menu-icon icon-signout"></i>Logout </a></li>
                         </ul>
-                    </div>
-                    <!--/.sidebar-->
-                </div>
-                <!--/.span3-->
-                <!--/.span9-->
+                    </div><!--/.sidebar-->
+                </div><!--/.span3-->
+
                 <div class="span9">
                     <div class="content">
-
                         <div class="module">
                             <div class="module-head">
                                 <h3>Add Book</h3>
                             </div>
                             <div class="module-body">
-
-
                                 <br>
-
                                 <form class="form-horizontal row-fluid" action="addbook.php" method="post">
                                     <div class="control-group">
                                         <label class="control-label" for="Title"><b>Book Title</b></label>
@@ -102,26 +96,25 @@ if ($_SESSION['Personal_ID']) {
                                             <input type="text" id="author1" name="author1" class="span8" required>
                                             <input type="text" id="author2" name="author2" class="span8">
                                             <input type="text" id="author3" name="author3" class="span8">
-
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                    <label class="control-label" for="Genre"><b>Genre</b></label>
-                                    <div class="controls">
-                                        <select name="Genre" id="Genre">
-                                        <option value="Action and Adventure">Action and Adventure</option>
-                                        <option value="Detective and Mystery">Detective and Mystery</option>
-                                        <option value="Fantasy">Fantasy</option>
-                                        <option value="Historical Fiction">Historical Fiction</option>
-                                        <option value="Horror">Horror</option>
-                                        <option value="Memoir & Autobiography">Memoir & Autobiography</option>
-                                        <option value="Novel">Novel</option>
-                                        <option value="Psychological Fiction">Psychological Fiction</option>
-                                        <option value="Romance">Romance</option>
-                                        <option value="Sci-Fi">Science Fiction</option>
-                                        <option value="True Crime">True Crime</option>
-                                        </select>
-                                    </div>
+                                        <label class="control-label" for="Genre"><b>Genre</b></label>
+                                        <div class="controls">
+                                            <select name="Genre" id="Genre">
+                                                <option value="Action and Adventure">Action and Adventure</option>
+                                                <option value="Detective and Mystery">Detective and Mystery</option>
+                                                <option value="Fantasy">Fantasy</option>
+                                                <option value="Historical Fiction">Historical Fiction</option>
+                                                <option value="Horror">Horror</option>
+                                                <option value="Memoir & Autobiography">Memoir & Autobiography</option>
+                                                <option value="Novel">Novel</option>
+                                                <option value="Psychological Fiction">Psychological Fiction</option>
+                                                <option value="Romance">Romance</option>
+                                                <option value="Sci-Fi">Science Fiction</option>
+                                                <option value="True Crime">True Crime</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="control-group">
                                         <label class="control-label" for="Year"><b>Year</b></label>
@@ -137,8 +130,6 @@ if ($_SESSION['Personal_ID']) {
                                                    placeholder="Number of Copies" class="span8" required>
                                         </div>
                                     </div>
-
-
                                     <div class="control-group">
                                         <div class="controls">
                                             <button type="submit" name="submit" class="btn">Add Book</button>
@@ -147,25 +138,18 @@ if ($_SESSION['Personal_ID']) {
                                 </form>
                             </div>
                         </div>
-
-
                     </div><!--/.content-->
                 </div>
-
             </div>
-        </div>
-        <!--/.container-->
-
+        </div><!--/.container-->
     </div>
-
 
     <div class="footer">
         <div class="container">
             <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
         </div>
-    </div>
+    </div><!--/.wrapper-->
 
-    <!--/.wrapper-->
     <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
     <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -206,14 +190,10 @@ if ($_SESSION['Personal_ID']) {
         } else {//echo $conn->error;
             echo "<script type='text/javascript'>alert('Error')</script>";
         }
-
     }
     ?>
-
     </body>
-
     </html>
-
 
 <?php } else {
     echo "<script type='text/javascript'>alert('Access Denied!!!')</script>";
