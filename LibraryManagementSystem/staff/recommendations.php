@@ -69,80 +69,48 @@ if ($_SESSION['Personal_ID']) {
                         <!--/.sidebar-->
                     </div>
                     <!--/.span3-->
+                    
                     <div class="span9">
-                        <form class="form-horizontal row-fluid" action="current.php" method="post">
+                    <div class="content">
+
+                        <div class="module">
+                            <div class="module-head">
+                                <h3>Recommend a Book</h3>
+                            </div>
+                            <div class="module-body">
+
+                                    
+                                    <br >
+
+                                    <form class="form-horizontal row-fluid" action="recommendations.php" method="post">
                                         <div class="control-group">
-                                            <label class="control-label" for="Search"><b>Search:</b></label>
+                                            <label class="control-label" for="Title"><b>Book Title</b></label>
                                             <div class="controls">
-                                                <input type="text" id="title" name="title" placeholder="Enter Book Name/Book Id." class="span8" required>
-                                                <button type="submit" name="submit"class="btn">Search</button>
+                                                <input type="text" id="title" name="title" placeholder="Title" class="span8" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="control-group">
+                                            <label class="control-label" for="Description"><b>Description</b></label>
+                                            <div class="controls">
+                                                <input type="text" id="Description" name="Description" placeholder="Description" class="span8" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <button type="submit" name="submit"class="btn">Submit Recommendation</button>
                                             </div>
                                         </div>
                                     </form>
-                                    <br>
-                                    <?php
-                                    $Personal_ID = $_SESSION['Personal_ID'];
-                                    if(isset($_POST['submit']))
-                                        {$s=$_POST['title'];
-                                            $sql="select * from LMS.record,LMS.book where Personal_ID = '$Personal_ID' and Date_of_Issue is NOT NULL and Date_of_Return is NULL and book.Bookid = record.BookId and (record.BookId='$s' or Title like '%$s%')";
+                            </div>
+                        </div>
 
-                                        }
-                                    else
-                                        $sql="select * from LMS.record,LMS.book where Personal_ID = '$Personal_ID' and Date_of_Issue is NOT NULL and Date_of_Return is NULL and book.Bookid = record.BookId";
+                        
+                        
+                    </div><!--/.content-->
+                </div>
 
-                                    $result=$conn->query($sql);
-                                    $rowcount=mysqli_num_rows($result);
-
-                                    if(!($rowcount))
-                                        echo "<br><center><h2><b><i>No Results</i></b></h2></center>";
-                                    else
-                                    {
-
-                                
-                                    ?>
-                        <table class="table" id = "tables">
-                                  <thead>
-                                    <tr>
-                                      <th>Book id</th>
-                                      <th>Book name</th>
-                                      <th>Issue Date</th>
-                                      <th>Due date</th>
-                                      <th></th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-
-                                <?php
-
-                            
-                            //$result=$conn->query($sql);
-                            while($row=$result->fetch_assoc())
-                            {
-                                $bookid=$row['BookId'];
-                                $name=$row['Title'];
-                                $issuedate=$row['Date_of_Issue'];
-                                $duedate=$row['Due_Date'];
-                                $renewals=$row['Renewals_left'];
-                            
-                            ?>
-
-                                    <tr>
-                                      <td><?php echo $bookid ?></td>
-                                      <td><?php echo $name ?></td>
-                                      <td><?php echo $issuedate ?></td>
-                                      <td><?php echo $duedate ?></td>
-                                        <td><center>
-                                        <?php 
-                                         if($renewals)
-                                            echo "<a href=\"renew_request.php?id=".$bookid."\" class=\"btn btn-success\">Renew</a>";
-                                        ?>
-                                        <a href="return_request.php?id=<?php echo $bookid; ?>" class="btn btn-primary">Return</a>
-                                        </center></td>
-                                    </tr>
-                            <?php }} ?>
-                                    </tbody>
-                                </table>
-                    </div>
                     <!--/.span9-->
                 </div>
             </div>
@@ -162,7 +130,31 @@ if ($_SESSION['Personal_ID']) {
         <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
         <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
         <script src="scripts/common.js" type="text/javascript"></script>
-      
+
+<?php
+if(isset($_POST['submit']))
+{
+    $title=$_POST['title'];
+    $Description=$_POST['Description'];
+    $Personal_ID=$_SESSION['Personal_ID'];
+
+$sql1="insert into LMS.recommendations (Book_Name,Description,Personal_ID) values ('$title','$Description','$Personal_ID')"; 
+
+
+
+if($conn->query($sql1) === TRUE){
+
+
+echo "<script type='text/javascript'>alert('Success')</script>";
+}
+else
+{//echo $conn->error;
+echo "<script type='text/javascript'>alert('Error')</script>";
+}
+    
+}
+?> 
+
     </body>
 
 </html>
