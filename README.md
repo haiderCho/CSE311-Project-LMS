@@ -29,9 +29,10 @@
 │   │   ├── css
 │   │   │   └── theme.css
 │   │   ├── images
-│   │   │   ├──
-│   │   │   ├──
-│   │   │   └──
+│   │   │   ├── icons
+│   │   │   ├── jquery-ui
+│   │   │   ├── profile2.png
+│   │   │   └── user.png
 │   │   ├── scripts
 │   │   │   ├── datatables
 │   │   │   ├── flot
@@ -78,9 +79,10 @@
 │   │   ├── css
 │   │   │   └── theme.css
 │   │   ├── images
-│   │   │   ├──
-│   │   │   ├──
-│   │   │   ├──
+│   │   │   ├── icons
+│   │   │   ├── jquery-ui
+│   │   │   ├── profile2.png
+│   │   │   └──  user.png
 │   │   ├── scripts
 │   │   │   ├── datatables
 │   │   │   ├── flot
@@ -105,19 +107,20 @@
 │   │   ├── bootstrap
 │   │   │   ├── css
 │   │   │   ├── img
-│   │   │   ├── js
+│   │   │   └──  js
 │   │   ├── css
-│   │   │   ├── theme.css
+│   │   │   └──  theme.css
 │   │   ├── images
-│   │   │   ├──
-│   │   │   ├──
-│   │   │   ├──
+│   │   │   ├── icons
+│   │   │   ├── jquery-ui
+│   │   │   ├── profile2.png
+│   │   │   └──  user.png
 │   │   ├── scripts
 │   │   │   ├── datatables
 │   │   │   ├── flot
 │   │   │   ├── common.js
 │   │   │   ├── jquery-1.9.1.min.js
-│   │   │   ├── jquery-ui-1.10.1.custom.min.js
+│   │   │   └──  jquery-ui-1.10.1.custom.min.js
 │   │   ├── book.php
 │   │   ├── bookdetails.php
 │   │   ├── current.php
