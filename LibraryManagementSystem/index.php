@@ -5,23 +5,24 @@ require('dbconn.php');
 <!DOCTYPE html>
 <html>
 
-<!-- Head -->
+
 <head>
     <title>The Library of Ohara</title>
-    <!-- Style -->
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-    <!-- /Fonts -->
+   
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all"> <!-- Style -->
+    
     <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-</head>
+    <!-- /Fonts -->
+</head> <!-- Head -->
 
-<!-- Body -->
 <body>
-<div class="wrapper">
+
 
 <ht>The Library of Ohara</ht>
+
 <div class="container">
     <div class="login">
         <h2><b>Sign In</b></h2>
@@ -56,6 +57,7 @@ require('dbconn.php');
 
         <br>
         <br>
+
         <div class="send-button">
             <input type="submit" name="signup" value="Sign Up">
     </form>
@@ -68,18 +70,10 @@ require('dbconn.php');
 
 <div class="footer w3layouts agileits">
     <p> &copy; 2022 Ohara Library Management System. All Rights Reserved.</a></p>
-    <p><a class="underline" href="about.html"><b>About the Project.</b></a></p>
+    <p><b><a class="underline" href="about.html">About the Project.</a></b></p>
 </div>
-    
-      <bub><span class="dot"></span></bub>
-      <bub><span class="dot"></span></bub>
-      <bub><span class="dot"></span></bub>
-      <bub><span class="dot"></span></bub>
-      <bub><span class="dot"></span></bub>
-      <bub><span class="dot"></span></bub>
-      <bub><span class="dot"></span></bub>
 
-</div>
+
 <?php
 if (isset($_POST['signin'])) {
     $u = $_POST['Personal_ID'];
@@ -92,7 +86,8 @@ if (isset($_POST['signin'])) {
     $row = $result->fetch_assoc();
     $x = $row['Password'];
     $y = $row['Type'];
-    if (strcasecmp($x, $p) == 0 && !empty($u) && !empty($p)) {//echo "Login Successful";
+    if (strcasecmp($x, $p) == 0 && !empty($u) && !empty($p)) {
+        //echo "Login Successful";
         $_SESSION['Personal_ID'] = $u;
 
         if ($y == 'Admin' || $y == 'Librarian')
@@ -126,6 +121,5 @@ if (isset($_POST['signup'])) {
 }
 ?>
 
-</body>
-<!-- //Body -->
-</html>
+</body><!-- //Body -->
+</html><!-- Html -->

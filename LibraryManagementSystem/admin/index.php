@@ -20,6 +20,7 @@ if ($_SESSION['Personal_ID']) {
         <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
               rel='stylesheet'>
     </head>
+
     <body>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
@@ -45,6 +46,7 @@ if ($_SESSION['Personal_ID']) {
             </div>
         </div><!-- /navbar-inner -->
     </div><!-- /navbar -->
+    
     <div class="wrapper">
         <div class="container">
             <div class="row">
@@ -92,6 +94,7 @@ if ($_SESSION['Personal_ID']) {
                                 <h1 class="card-title">
                                     <center><?php echo $name ?></center>
                                 </h1>
+                                <div class = "line"></div>
                                 <br>
                                 <p><b>Email ID: </b><?php echo $email ?></p>
                                 <br>

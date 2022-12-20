@@ -77,8 +77,9 @@ if ($_SESSION['Personal_ID']) {
                         <a href="renew_requests.php" class="btn btn-info">Renew Request</a>
                         <a href="return_requests.php" class="btn btn-info">Return Requests</a>
                     </center>
-                    <h1><i>Renew Requests</i></h1>
-                    <table class="table" id="tables">
+                    <h1>Renew Requests</h1>
+                    <div class="module">
+                        <table class="table" id="tables">
                         <thead>
                         <tr>
                             <th>Personal ID</th>
@@ -89,6 +90,8 @@ if ($_SESSION['Personal_ID']) {
                         </tr>
                         </thead>
                         <tbody>
+                    </div>
+                    
                         <?php
                         $sql = "select * from LMS.record,LMS.book,LMS.renew where renew.BookId=book.BookId and renew.Personal_ID=record.Personal_ID and renew.BookId=record.BookId";
                         $result = $conn->query($sql);

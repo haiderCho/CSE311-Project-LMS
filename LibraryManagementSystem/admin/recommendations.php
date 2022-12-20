@@ -73,7 +73,8 @@ if ($_SESSION['Personal_ID']) {
                 </div><!--/.span3-->
 
                 <div class="span9">
-                    <table class="table" id="tables">
+                    <div class="module">
+                        <table class="table" id="tables">
                         <thead>
                         <tr>
                             <th>Book Name</th>
@@ -98,7 +99,8 @@ if ($_SESSION['Personal_ID']) {
                             </tr>
                         <?php } ?>
                         </tbody>
-                    </table>
+                        </table>
+                    </div>
                     <center>
                         <a href="addbook.php" class="btn btn-success">Add a Book</a>
                     </center>

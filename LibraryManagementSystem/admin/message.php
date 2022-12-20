@@ -105,9 +105,10 @@ if ($_SESSION['Personal_ID']) {
                     </div><!--/.content-->
                 </div><!--/.span9-->
             </div>
-        </div><!--/.container-->
-    </div><!--/.wrapper-->
-
+        </div>
+   </div><!--/.wrapper-->
+ </div><!--/.container-->
+ 
     <div class="footer">
         <div class="container">
             <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.

@@ -78,7 +78,8 @@ if ($_SESSION['Personal_ID']) {
                         <a href="renew_requests.php" class="btn btn-info">Renew Request</a>
                         <a href="return_requests.php" class="btn btn-info">Return Requests</a>
                     </center>
-                    <h1><i>Return Requests</i></h1>
+                    <h1>Return Requests</h1>
+                    <div class="module">
                     <table class="table" id="tables">
                         <thead>
                         <tr>
@@ -90,6 +91,7 @@ if ($_SESSION['Personal_ID']) {
                         </tr>
                         </thead>
                         <tbody>
+</div>
                         <?php
                         $sql = "select return.BookId,return.Personal_ID,Title,datediff(curdate(),Due_Date) as x from LMS.return,LMS.book,LMS.record where return.BookId=book.BookId and return.BookId=record.BookId and return.Personal_ID=record.Personal_ID";
                         $result = $conn->query($sql);

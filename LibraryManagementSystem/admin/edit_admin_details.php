@@ -129,9 +129,7 @@ if ($_SESSION['Personal_ID']) {
 
                                 <div class="control-group">
                                     <div class="controls">
-                                        <button type="submit" name="submit" class="btn-primary">
-                                            <center>Update Details</center>
-                                        </button>
+                                    <button type="submit" name="submit" class="btn">Update Details</button>
                                     </div>
                                 </div>
 

@@ -84,6 +84,7 @@ if ($_SESSION['Personal_ID']) {
                         </div>
                     </form>
                     <br>
+                <div class="module">    
                     <?php
                     if (isset($_POST['submit'])) {
                         $s = $_POST['title'];
@@ -139,6 +140,7 @@ if ($_SESSION['Personal_ID']) {
                         } ?>
                         </tbody>
                     </table>
+                    </div>
                 </div><!--/.span9-->
             </div>
         </div><!--/.container-->

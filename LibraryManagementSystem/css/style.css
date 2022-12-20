@@ -1,135 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-  }
-  .wrapper {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #030423);
-    position: absolute;
-  }
-  .wrapper h1 {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    font-family: sans-serif;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: 888;
-    text-transform: uppercase;
-  }
-  .wrapper bub {
-    height: 60px;
-    width: 60px;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    border-radius: 50px;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    animation: 4s linear infinite;
-  }
-  bub .dot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    top: 20%;
-    right: 20%;
-  }
-  .wrapper bub:nth-child(1) {
-    top: 20%;
-    left: 20%;
-    animation: animate 8s linear infinite;
-  }
-  .wrapper bub:nth-child(2) {
-    top: 60%;
-    left: 80%;
-    animation: animate 10s linear infinite;
-  }
-  .wrapper bub:nth-child(3) {
-    top: 40%;
-    left: 40%;
-    animation: animate 3s linear infinite;
-  }
-  .wrapper bub:nth-child(4) {
-    top: 66%;
-    left: 30%;
-    animation: animate 7s linear infinite;
-  }
-  .wrapper bub:nth-child(5) {
-    top: 90%;
-    left: 10%;
-    animation: animate 9s linear infinite;
-  }
-  .wrapper bub:nth-child(6) {
-    top: 30%;
-    left: 60%;
-    animation: animate 5s linear infinite;
-  }
-  .wrapper bub:nth-child(7) {
-    top: 70%;
-    left: 20%;
-    animation: animate 8s linear infinite;
-  }
-  .wrapper bub:nth-child(8) {
-    top: 75%;
-    left: 60%;
-    animation: animate 10s linear infinite;
-  }
-  .wrapper bub:nth-child(9) {
-    top: 50%;
-    left: 50%;
-    animation: animate 6s linear infinite;
-  }
-  .wrapper bub:nth-child(10) {
-    top: 45%;
-    left: 20%;
-    animation: animate 10s linear infinite;
-  }
-  .wrapper bub:nth-child(11) {
-    top: 10%;
-    left: 90%;
-    animation: animate 9s linear infinite;
-  }
-  .wrapper bub:nth-child(12) {
-    top: 20%;
-    left: 70%;
-    animation: animate 7s linear infinite;
-  }
-  .wrapper bub:nth-child(13) {
-    top: 20%;
-    left: 20%;
-    animation: animate 8s linear infinite;
-  }
-  .wrapper bub:nth-child(14) {
-    top: 60%;
-    left: 5%;
-    animation: animate 6s linear infinite;
-  }
-  .wrapper bub:nth-child(15) {
-    top: 90%;
-    left: 80%;
-    animation: animate 9s linear infinite;
-  }
-  @keyframes animate {
-    0% {
-      transform: scale(0) translateY(0) rotate(70deg);
-    }
-    100% {
-      transform: scale(1.3) translateY(-100px) rotate(360deg);
-    }
-  }
-  
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font: inherit;
     vertical-align: baseline;
 }
@@ -225,14 +99,17 @@ img {
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background: #0c0218;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    font-family: 'Share Tech', sans-serif;
+color: white;
+
+jsutify-content: center;
+align-items: center;
+margin: 0;
+width: 100vw;
+height: 100vh;
+text-shadow: 8px 8px 10px #0000008c;
+background-color: #343a40;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
 }
 
 body a {
@@ -250,80 +127,21 @@ h1 {
     letter-spacing: 4px;
     margin: 60px 0;
     color: #FFFFFF;
+
 }
 
 .container {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
-    padding: 35px;
-
-    background: linear-gradient(270deg, #0000004f, #1c00384f);
-    border: 2px ridge #00000033;
+    padding: 2.5%;
+    background: linear-gradient(222deg, #919191, #f5f5f5);
+    border: 2px ridge #919191;
     border-radius: 5px;
-    -moz-box-shadow: 0px 2px 10px 1px #7e0fff;
-    -webkit-box-shadow: 0px 2px 10px 1px #7e0fff;
-    box-shadow: 0px 2px 10px 1px #7e0fff;
-/* 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.7px);
-    -webkit-backdrop-filter: blur(1.7px);
-    border: 1px solid rgba(255, 255, 255, 0.3); */
-
-    /* border: 3px ridge rgba(238, 238, 238, 0.13);
-    border-radius: 5px;
-    -moz-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
-    -webkit-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
-    box-shadow: 0px 2px 10px 1px rgba(44, 44, 44, 0.52); */
+    -moz-box-shadow: 0px 2px 10px 1px #f5f5f5;
+    -webkit-box-shadow: 0px 2px 10px 1px #f5f5f5;
+    box-shadow: 0px 2px 10px 1px #f5f5f5;
 }
 
-container:after {
-    position: absolute;
-    content: "";
-    top: 5vw;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.75);
-    -webkit-filter: blur(5vw);
-    -moz-filter: blur(5vw);
-    -ms-filter: blur(5vw);
-    filter: blur(5vw);
-    background: linear-gradient(270deg, #0fffc1, #7e0fff);
-    background-size: 200% 200%;
-    animation: animateGlow 10s ease infinite;
-  }
-  @keyframes animateGlow {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  @keyframes textColor {
-    0% {
-      color: #1a0033;
-    }
-    50% {
-      color: #003333;
-    }
-    100% {
-      color: #000033;
-    }
-  }
-
-.title {
-    float: top;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    text-align: center;
-}
 
 .login {
     width: 45%;
@@ -333,40 +151,54 @@ container:after {
 }
 
 ::-webkit-input-placeholder {
-    color: #ffffff;
+    color: #000000;
 }
 
 :-moz-placeholder {
-    color: #ffffff;
+    color: #000000;
 }
 
 ::-moz-placeholder {
-    color: #ffffff;
+    color: #000000;
 }
 
 :-ms-input-placeholder {
-    color: #ffffff;
+    color: #000000;
 }
 
 h2 {
     font-size: 35px;
     text-align: left;
-    color: #FFF;
-    font-weight: 100;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
 ht {
-    text-shadow: 0px 2px 10px 1px #3e3d3f;
-    animation: textColor 10s ease infinite;
-    font-family: Georgia, serif;
-    font-size: 4vw;
-    font-weight: 800;
+    transform: translate(50%,-50%);
     text-transform: uppercase;
-    text-align: center;
-    line-height: 1.5;
-}
+    font-family: verdana;
+    font-size: 4em;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16, 16, 16, 0.5),
+    1px 22px 10px rgba(16,16,16,0.35),
+    1px 25px 35px rgba(16,16,16,0.35),
+    1px 30px 60px rgba(16,16,16,0.5);
 
+    text-align: center;
+    line-height: 2;
+}
 
 ul.tick {
     tfloat: left;
@@ -383,10 +215,10 @@ ul.tick li input[type="checkbox"] {
 ul.tick li input[type="checkbox"] + label {
     position: relative;
     padding-left: 30px;
-    border: #F0F8FF;
+    border: #000000;
     display: inline-block;
     font-size: 13px;
-    color: #EEE;
+    color: rgb(0, 0, 0);
 }
 
 ul.tick li input[type="checkbox"] + label span:first-child {
@@ -452,8 +284,6 @@ li.twt {
 }
 
 .social-icons ul li.ggp span.icons {
-    /*--w3layouts--*/
-    /*--agileits--*/
     background: url("../images/i3.png") no-repeat center;
 }
 
@@ -490,17 +320,17 @@ input[type="text"], input[type="password"] {
     font-size: 20px;
     font-weight: 600;
     border-radius: 5px;
-    -moz-box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.596);
-    -webkit-box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.596);
-    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.596);
+    -moz-box-shadow: 0 2px 2px 2px #2c2e33;
+    -webkit-box-shadow: 0 2px 2px 2px #2c2e33;
+    box-shadow: 0 2px 2px 2px #2c2e33;
     border: none;
     padding: 13px 0;
     cursor: pointer;
-    background: linear-gradient(270deg, #000000bb, #1c0038bb);
+    background: linear-gradient(270deg, #0e3d3dbb, #106384bb);
 }
 
 .send-button input[type="submit"]:hover {
-    background-color:  #14921b;
+    background-color:  #0cca88;
     border: 0px solid #FFF;
     color: rgb(255, 255, 255);
     transition: 0.5s all;
@@ -512,28 +342,28 @@ input[type="text"], input[type="password"] {
 }
 
 .login a {
-    color: rgb(0, 0, 0);
+    color: rgb(248, 248, 248);
 }
 
 .login a:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(46, 115, 125);
 }
 
 .register {
     width: 44%;
     float: left;
-    border-left: 1px solid rgba(255, 255, 255, 0.575);
+    border-left: 1px solid rgba(0, 0, 0, 0.575);
     padding-left: 40px;
     text-align: left;
 }
 
 .register p {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     margin-bottom: 5px;
 }
 
 .register footer {
-    color: rgb(224, 224, 224);
+    color: rgb(43, 42, 42);
     font-size: 11px;
     font-weight: 500;
     margin-bottom: 5px;
@@ -549,7 +379,7 @@ input[type="text"], input[type="password"] {
 
 .footer {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 3%;
 }
 
 .footer p {
@@ -558,7 +388,7 @@ input[type="text"], input[type="password"] {
 }
 
 .footer a {
-    color: rgb(6, 0, 56);
+    color: rgb(205, 205, 205);
     text-decoration: none;
 }
 
