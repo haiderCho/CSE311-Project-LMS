@@ -1,5 +1,12 @@
 <h1 align="center"> CSE311 (DATABASE SYSTEMS): Project </h1>
-<h2 align="center"> Library Management System </h2>
+<h2 align="center"> Library Management System
+<p align="center">
+ <img alt="Languages" src="https://img.shields.io/github/languages/count/haiderCho/CSE311-Project-LMS">
+ <img alt="Repository size" src="https://img.shields.io/github/repo-size/haiderCho/CSE311-Project-LMS">
+ <img alt="Contributors" src="https://img.shields.io/github/contributors/haiderCho/CSE311-Project-LMS">
+ <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/haiderCho/CSE311-Project-LMS">
+</p>
+</h2>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
