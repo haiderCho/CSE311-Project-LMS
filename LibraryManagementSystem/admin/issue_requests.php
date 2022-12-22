@@ -84,8 +84,9 @@ if ($_SESSION['Personal_ID']) {
                             <thead>
                             <tr>
                                 <th>Personal ID</th>
+                                <th>Name</th>
                                 <th>Book Id</th>
-                                <th>Book Name</th>
+                                <th>Book Title</th>
                                 <th>Availabilty</th>
                                 <th></th>
                             </tr>
@@ -93,19 +94,21 @@ if ($_SESSION['Personal_ID']) {
                             <tbody>
                     </div>
                     <?php
-                    $sql = "select * from LMS.record,LMS.book where Date_of_Issue is NULL and record.BookId=book.BookId order by Time";
+                    $sql = "select user.Personal_ID,Name, book.BookId,Title,Availability from LMS.record,LMS.book,LMS.user where Date_of_Issue is NULL and record.BookId=book.BookId and record.Personal_ID=user.Personal_ID order by Time";
                     $result = $conn->query($sql);
                     while ($row = $result->fetch_assoc()) {
-                        $bookid = $row['BookId'];
                         $Personal_ID = $row['Personal_ID'];
-                        $name = $row['Title'];
+                        $Name = $row['Name'];
+                        $bookid = $row['BookId'];
+                        $Title = $row['Title'];
                         $avail = $row['Availability'];
                         ?>
                         <tr>
-                            <td><?php echo strtoupper($Personal_ID) ?></td>
-                            <td><?php echo $bookid ?></td>
-                            <td><b><?php echo $name ?></b></td>
-                            <td><?php echo $avail ?></td>
+                            <td><b><?php echo strtoupper($Personal_ID) ?></b></td>
+                            <td><b><?php echo strtoupper($Name) ?></b></td>
+                            <td><b><?php echo $bookid ?></b></td>
+                            <td><b><?php echo $Title ?></b></td>
+                            <td><b><?php echo $avail ?></b></td>
                             <td>
                                 <center>
                                     <?php

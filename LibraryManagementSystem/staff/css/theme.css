@@ -7,7 +7,7 @@
 #tables td, #tables th {
     border: 0px solid #ddd;
     border-radius: 2px;
-    border: 1px solid rgba(207, 207, 207, 0.144);
+    border: 1px solid #332d2d66;
     padding: 8px;
 }
 
@@ -16,7 +16,7 @@
 }
 
 #tables tr:nth-child(odd) {
-    background-color: #e6e6ff;
+    background-color: #fff7e6;
 }
 
 #tables tr:hover {
@@ -30,7 +30,7 @@
     background-color: #332d2d;
     border-radius: 2px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #332d2d2d;
     color: white;
 }
 
@@ -40,8 +40,8 @@ body {
     background: #f0f2f5;
     border-radius: 4px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #777
+    border: 0px solid rgba(255, 255, 255, 0.3);
+    color: #332d2d
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -79,7 +79,7 @@ h6 {
 }
 
 strong, b {
-    color: #555
+    color: #332d2d;
 }
 
 a:hover, a:focus {
@@ -114,12 +114,12 @@ blockquote small::before {
 }
 
 .text-muted {
-    color: #999;
+    color: rgb(153, 153, 153);
 }
 
 .wrapper {
     background: #f0f2f5;
-    border-bottom: 1px solid rgba(0, 8, 125, 0.303);
+    border-bottom: 1px solid rgba(125, 62, 0, 0.303);
     -webkit-box-shadow: 0 1px 2px rgb(255, 255, 255);
     -moz-box-shadow: 0 1px 2px rgb(255, 255, 255);
     box-shadow: 0 4px 30px rgb(255, 255, 255);

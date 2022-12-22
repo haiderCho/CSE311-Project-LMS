@@ -124,8 +124,8 @@ if ($_SESSION['Personal_ID']) {
                                 $avail = $row['Availability'];
                                 ?>
                                 <tr>
-                                    <td><?php echo $bookid ?></td>
-                                    <td><?php echo $name ?></td>
+                                    <td><b><?php echo $bookid ?></b></td>
+                                    <td><b><?php echo $name ?></b></td>
                                     <td><b><?php echo $year ?></b></td>
                                     <td><b><?php echo $Genre ?></b></td>
                                     <td><b><?php echo $avail ?></b></td>

@@ -3,7 +3,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 0;
     border: 0;
     font-size: 100%;
-    color: rgb(0, 0, 0);
+    color: #332d2d;
     font: inherit;
     vertical-align: baseline;
 }
@@ -92,6 +92,7 @@ nav.horizontal ul li {
 img {
     max-width: 100%;
 }
+
 /*-- Reset Code --*/
 
 
@@ -100,16 +101,14 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     font-family: 'Share Tech', sans-serif;
-color: white;
-
-jsutify-content: center;
-align-items: center;
-margin: 0;
-width: 100vw;
-height: 100vh;
-text-shadow: 8px 8px 10px #0000008c;
-background-color: #343a40;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
+    color: white;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    text-shadow: 8px 8px 10px #0000008c;
+    background-color: #332d2d;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%239C92AC' fill-opacity='0.25' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(to right top, #343a40, #2b2c31, #211f22, #151314, #000000);
 }
 
 body a {
@@ -175,26 +174,26 @@ h2 {
 }
 
 ht {
-    transform: translate(50%,-50%);
+    transform: translate(50%, -50%);
     text-transform: uppercase;
     font-family: verdana;
     font-size: 4em;
     font-weight: 700;
     color: #f5f5f5;
     text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191,
     1px 18px 6px rgba(16, 16, 16, 0.5),
-    1px 22px 10px rgba(16,16,16,0.35),
-    1px 25px 35px rgba(16,16,16,0.35),
-    1px 30px 60px rgba(16,16,16,0.5);
+    1px 22px 10px rgba(16, 16, 16, 0.35),
+    1px 25px 35px rgba(16, 16, 16, 0.35),
+    1px 30px 60px rgba(16, 16, 16, 0.5);
 
     text-align: center;
     line-height: 2;
@@ -330,7 +329,7 @@ input[type="text"], input[type="password"] {
 }
 
 .send-button input[type="submit"]:hover {
-    background-color:  #0cca88;
+    background-color: #0cca88;
     border: 0px solid #FFF;
     color: rgb(255, 255, 255);
     transition: 0.5s all;

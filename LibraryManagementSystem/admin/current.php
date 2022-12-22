@@ -77,7 +77,7 @@ if ($_SESSION['Personal_ID']) {
                         <div class="control-group">
                             <label class="control-label" for="Search"><b>Search:</b></label>
                             <div class="controls">
-                                <input type="text" id="title" name="title" placeholder="Enter ID/Book Name/Book Id."
+                                <input type="text" id="title" name="title" placeholder="Enter ID/Book Title/Book Id."
                                        class="span8" required>
                                 <button type="submit" name="submit" class="btn">Search</button>
                             </div>
@@ -90,7 +90,7 @@ if ($_SESSION['Personal_ID']) {
                         $s = $_POST['title'];
                         $sql = "select record.BookId,Personal_ID,Title,Due_Date,Date_of_Issue,datediff(curdate(),Due_Date) as x from LMS.record,LMS.book where (Date_of_Issue is NOT NULL and Date_of_Return is NULL and book.Bookid = record.BookId) and (Personal_ID='$s' or record.BookId='$s' or Title like '%$s%')";
                     } else
-                        $sql = "select record.BookId,Personal_ID,Title,Due_Date,Date_of_Issue,datediff(curdate(),Due_Date) as x from LMS.record,LMS.book where Date_of_Issue is NOT NULL and Date_of_Return is NULL and book.Bookid = record.BookId";
+                        $sql = "select user.Personal_ID,Name,record.BookId,Title,Due_Date,Date_of_Issue,datediff(curdate(),Due_Date) as x from LMS.record,LMS.book,LMS.user where Date_of_Issue is NOT NULL and Date_of_Return is NULL and book.Bookid = record.BookId and record.Personal_ID=user.Personal_ID";
                     $result = $conn->query($sql);
                     $rowcount = mysqli_num_rows($result);
 
@@ -103,8 +103,9 @@ if ($_SESSION['Personal_ID']) {
                         <thead>
                         <tr>
                             <th>Personal ID</th>
+                            <th>Name</th>
                             <th>Book id</th>
-                            <th>Book name</th>
+                            <th>Book Title</th>
                             <th>Issue Date</th>
                             <th>Due date</th>
                             <th>Dues</th>
@@ -117,19 +118,21 @@ if ($_SESSION['Personal_ID']) {
                         //$result=$conn->query($sql);
                         while ($row = $result->fetch_assoc()) {
                             $Personal_ID = $row['Personal_ID'];
+                            $Name = $row['Name'];
                             $bookid = $row['BookId'];
-                            $name = $row['Title'];
+                            $Title = $row['Title'];
                             $issuedate = $row['Date_of_Issue'];
                             $duedate = $row['Due_Date'];
                             $dues = $row['x'];
                             ?>
 
                             <tr>
-                                <td><?php echo strtoupper($Personal_ID) ?></td>
-                                <td><?php echo $bookid ?></td>
-                                <td><?php echo $name ?></td>
-                                <td><?php echo $issuedate ?></td>
-                                <td><?php echo $duedate ?></td>
+                                <td><b><?php echo strtoupper($Personal_ID) ?></b></td>
+                                <td><b><?php echo strtoupper($Name) ?></b></td>
+                                <td><b><?php echo $bookid ?></b></td>
+                                <td><b><?php echo $Title ?></b></td>
+                                <td><b><?php echo $issuedate ?></b></td>
+                                <td><b><?php echo $duedate ?></b></td>
                                 <td><?php if ($dues > 0)
                                         echo "<font color='red'>" . $dues . "</font>";
                                     else

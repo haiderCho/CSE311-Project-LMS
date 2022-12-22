@@ -126,11 +126,11 @@ if ($_SESSION['Personal_ID']) {
                             $email = $row['EmailId'];
                             ?>
                             <tr>
-                                <td><?php echo $Personal_ID ?></td>
-                                <td><?php echo $name ?></td>
-                                <td><?php echo $gender ?></td>
-                                <td><?php echo $Type ?></td>
-                                <td><?php echo $email ?></td>
+                                <td><b><?php echo $Personal_ID ?></b></td>
+                                <td><b><?php echo $name ?></b></td>
+                                <td><b><?php echo $gender ?></b></td>
+                                <td><b><?php echo $Type ?></b></td>
+                                <td><b><?php echo $email ?></b></td>
                                 <td>
                                     <center>
                                         <a href="userdetails.php?id=<?php echo $Personal_ID; ?>"

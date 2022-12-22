@@ -84,6 +84,7 @@ require('dbconn.php');
                                 $mobno=$row['MobNo'];
                                 ?>  
                     				<h1 class="card-title"><center><?php echo $name ?></center></h1>
+                                    <div class = "line"></div>
                     				<br>
                     				<p><b>Email ID: </b><?php echo $email ?></p>
                     				<br>

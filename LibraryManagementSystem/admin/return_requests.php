@@ -84,28 +84,32 @@ if ($_SESSION['Personal_ID']) {
                         <thead>
                         <tr>
                             <th>Personal ID</th>
+                             <th>Name</th>
                             <th>Book Id</th>
-                            <th>Book Name</th>
+                            <th>Book Title</th>
                             <th>Dues</th>
                             <th></th>
                         </tr>
                         </thead>
                         <tbody>
-</div>
+                    </div>
+
                         <?php
-                        $sql = "select return.BookId,return.Personal_ID,Title,datediff(curdate(),Due_Date) as x from LMS.return,LMS.book,LMS.record where return.BookId=book.BookId and return.BookId=record.BookId and return.Personal_ID=record.Personal_ID";
+                        $sql = "SELECT user.Personal_ID,user.Name,book.BookID,book.Title,datediff(curdate(),Due_Date) as x from LMS.return,LMS.book,LMS.record, LMS.user where return.BookId=book.BookId and return.BookId=record.BookId and return.Personal_ID=record.Personal_ID and return.Personal_ID=user.Personal_ID";
                         $result = $conn->query($sql);
                         while ($row = $result->fetch_assoc()) {
-                            $bookid = $row['BookId'];
                             $Personal_ID = $row['Personal_ID'];
-                            $name = $row['Title'];
+                            $Name = $row['Name'];
+                            $bookid = $row['BookID'];
+                            $Title = $row['Title'];
                             $dues = $row['x'];
 
                             ?>
                             <tr>
-                                <td><?php echo strtoupper($Personal_ID) ?></td>
-                                <td><?php echo $bookid ?></td>
-                                <td><b><?php echo $name ?></b></td>
+                                <td><b><?php echo strtoupper($Personal_ID) ?></b></td>
+                                <td><b><?php echo strtoupper($Name) ?></b></td>
+                                <td><b><?php echo $bookid ?></b></td>
+                                <td><b><?php echo $Title ?></b></td>
                                 <td><?php
                                     if ($dues > 0)
                                         echo $dues;

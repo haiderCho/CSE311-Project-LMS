@@ -83,8 +83,9 @@ if ($_SESSION['Personal_ID']) {
                         <thead>
                         <tr>
                             <th>Personal ID</th>
+                            <th>Name</th>
                             <th>Book Id</th>
-                            <th>Book Name</th>
+                            <th>Book Title</th>
                             <th>Renewals Left</th>
                             <th></th>
                         </tr>
@@ -93,20 +94,23 @@ if ($_SESSION['Personal_ID']) {
                     </div>
                     
                         <?php
-                        $sql = "select * from LMS.record,LMS.book,LMS.renew where renew.BookId=book.BookId and renew.Personal_ID=record.Personal_ID and renew.BookId=record.BookId";
+                        $sql = "select user.Personal_ID,Name,book.BookId,Title,record.Renewals_left from LMS.record, LMS.book, LMS.renew, LMS.user where renew.BookId=book.BookId and renew.Personal_ID=record.Personal_ID and renew.BookId=record.BookId AND renew.Personal_ID=user.Personal_ID";
                         $result = $conn->query($sql);
                         while ($row = $result->fetch_assoc()) {
-                            $bookid = $row['BookId'];
                             $Personal_ID = $row['Personal_ID'];
-                            $name = $row['Title'];
+                            $Name = $row['Name'];
+                            $bookid = $row['BookId'];
+                            
+                            $Title = $row['Title'];
                             $renewals = $row['Renewals_left'];
 
                             ?>
                             <tr>
-                                <td><?php echo strtoupper($Personal_ID) ?></td>
-                                <td><?php echo $bookid ?></td>
-                                <td><b><?php echo $name ?></b></td>
-                                <td><?php echo $renewals ?></td>
+                                <td><b><?php echo strtoupper($Personal_ID) ?></b></td>
+                                <td><b><?php echo strtoupper($Name) ?></b></td>
+                                <td><b><?php echo $bookid ?></b></td>
+                                <td><b><?php echo $Title ?></b></td>
+                                <td><b><?php echo $renewals ?></b></td>
                                 <td>
                                     <center>
                                         <?php
