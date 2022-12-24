@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2022 at 06:07 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Dec 24, 2022 at 06:17 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `author` (
   `BookId` int(10) NOT NULL,
   `Author` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `author`
@@ -137,9 +137,6 @@ INSERT INTO `author` (`BookId`, `Author`) VALUES
 (10098, 'P. G. Wodehouse'),
 (10099, 'Salman Rushdie'),
 (10100, 'Audre Lorde'),
-(10101, 'Toni Morrison'),
-(10102, 'Sebastian Barry'),
-(10103, 'Anne Michaels'),
 (10104, 'Chimamanda Ngozi Adichie'),
 (10105, 'Yaa Gyasi'),
 (10106, 'Andrea Levy'),
@@ -251,21 +248,21 @@ CREATE TABLE `book` (
   `Genre` varchar(50) DEFAULT NULL,
   `Year` int(4) DEFAULT NULL,
   `Availability` int(3) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `book`
 --
 
 INSERT INTO `book` (`BookId`, `Title`, `Genre`, `Year`, `Availability`) VALUES
-(10001, 'Beloved', 'Novel', 1987, 23),
+(10001, 'Beloved', 'Novel', 1987, 22),
 (10002, 'Days Without End', 'Novel', 2016, 25),
 (10003, 'Fugitive Pieces', 'Psychological Fiction', 1996, 25),
 (10004, 'Half of a Yellow Sun', 'Historical Fiction', 2006, 25),
 (10005, 'Homegoing', 'Historical Fiction', 2016, 25),
-(10006, 'Small Island', 'Novel', 2004, 25),
+(10006, 'Small Island', 'Novel', 2004, 24),
 (10007, 'The Bell Jar', 'Psychological Fiction', 1963, 25),
-(10008, 'The God of Small Things', 'Psychological Fiction', 1997, 25),
+(10008, 'The God of Small Things', 'Psychological Fiction', 1997, 24),
 (10009, 'Things Fall Apart', '', 1958, 25),
 (10010, 'White Teeth', '', 2000, 25),
 (10011, 'Bridget Jones\'s Diary', '', 1996, 25),
@@ -358,9 +355,6 @@ INSERT INTO `book` (`BookId`, `Title`, `Genre`, `Year`, `Availability`) VALUES
 (10098, 'Psmith, Journalist', '', 1909, 25),
 (10099, 'The Moor\'s Last Sigh', '', 1995, 25),
 (10100, 'Zami: A New Spelling of My Name', '', 1982, 25),
-(10101, 'Beloved', '', 1987, 25),
-(10102, 'Days Without End', '', 2016, 25),
-(10103, 'Fugitive Pieces', '', 1996, 25),
 (10104, 'Half of a Yellow Sun', '', 2006, 25),
 (10105, 'Homegoing', '', 2016, 25),
 (10106, 'Small Island', '', 2004, 25),
@@ -472,7 +466,7 @@ CREATE TABLE `message` (
   `Msg` varchar(255) DEFAULT NULL,
   `Date` date DEFAULT NULL,
   `Time` time DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `message`
@@ -510,7 +504,14 @@ INSERT INTO `message` (`M_Id`, `Personal_ID`, `Msg`, `Date`, `Time`) VALUES
 (64, 'ST1314563782', 'Your request for issue of BookId: 10049 has been accepted', '2022-12-07', '22:39:54'),
 (65, 'ST1314563782', 'Your request for issue of BookId: 10197 has been accepted', '2022-12-07', '22:39:59'),
 (66, 'ST1314563782', 'Your request for issue of BookId: 10001 has been accepted', '2022-12-07', '22:44:46'),
-(67, 'FC1165587969', 'Your request for issue of BookId: 10001  has been accepted', '2022-12-07', '22:44:49');
+(67, 'FC1165587969', 'Your request for issue of BookId: 10001  has been accepted', '2022-12-07', '22:44:49'),
+(68, 'ST2266577566', 'Your request for issue of BookId: 10135  has been rejected', '2022-12-20', '17:08:50'),
+(69, 'ST1116587562', 'An example of message function working.', '2022-12-24', '22:12:21'),
+(70, 'ST1116587562', 'Your request for issue of BookId: 10201 has been accepted', '2022-12-24', '22:14:29'),
+(71, 'ST1116587562', 'Your request for issue of BookId: 10001 has been accepted', '2022-12-24', '22:14:33'),
+(72, 'ST1116587562', 'Your request for issue of BookId: 10006 has been accepted', '2022-12-24', '22:14:38'),
+(73, 'ST1116587562', 'Your request for issue of BookId: 10008 has been accepted', '2022-12-24', '22:14:41'),
+(74, 'ST1116587562', 'Your request for return of BookId: 10201  has been accepted', '2022-12-24', '22:15:43');
 
 -- --------------------------------------------------------
 
@@ -523,7 +524,7 @@ CREATE TABLE `recommendations` (
   `Book_Name` varchar(50) DEFAULT NULL,
   `Description` varchar(255) DEFAULT NULL,
   `Personal_ID` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `recommendations`
@@ -547,7 +548,7 @@ CREATE TABLE `record` (
   `Dues` int(10) DEFAULT NULL,
   `Renewals_left` int(10) DEFAULT NULL,
   `Time` time DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `record`
@@ -559,6 +560,10 @@ INSERT INTO `record` (`Personal_ID`, `BookId`, `Date_of_Issue`, `Due_Date`, `Dat
 ('FC1165587969', 10128, '2022-12-07', '2023-02-05', NULL, NULL, 1, '10:34:33'),
 ('FC1165587969', 10150, '2022-12-07', '2023-02-05', NULL, NULL, 1, '10:34:38'),
 ('FC1165587969', 10153, '2022-11-30', '2023-01-29', NULL, NULL, 1, '10:05:07'),
+('ST1116587562', 10001, '2022-12-24', '2023-06-22', NULL, NULL, 1, '22:14:05'),
+('ST1116587562', 10006, '2022-12-24', '2023-06-22', NULL, NULL, 1, '22:13:58'),
+('ST1116587562', 10008, '2022-12-24', '2023-06-22', NULL, NULL, 1, '22:13:52'),
+('ST1116587562', 10201, '2022-12-24', '2023-06-22', '2022-12-24', -180, 1, '22:13:28'),
 ('ST1314563782', 10001, '2022-12-07', '2023-06-05', NULL, NULL, 1, '22:42:49'),
 ('ST1314563782', 10049, '2022-12-07', '2023-06-05', NULL, NULL, 1, '22:39:20'),
 ('ST1314563782', 10105, '2022-12-07', '2023-06-05', '2022-12-07', -180, 1, '22:08:33'),
@@ -578,7 +583,10 @@ INSERT INTO `record` (`Personal_ID`, `BookId`, `Date_of_Issue`, `Due_Date`, `Dat
 ('ST1646587562', 10141, '2022-11-03', '2023-05-02', NULL, NULL, 1, '17:22:27'),
 ('ST1646587562', 10151, '2022-11-03', '2023-05-02', NULL, NULL, 1, '17:22:19'),
 ('ST1656577567', 10097, '2022-11-30', '2023-05-29', NULL, NULL, 1, '00:50:04'),
-('ST1656577567', 10128, '2022-12-03', '2023-06-01', NULL, NULL, 1, '00:49:59');
+('ST1656577567', 10128, '2022-12-03', '2023-06-01', NULL, NULL, 1, '00:49:59'),
+('ST2266577566', 10004, NULL, NULL, NULL, NULL, NULL, '17:08:01'),
+('ST2266577566', 10124, NULL, NULL, NULL, NULL, NULL, '17:07:53'),
+('ST2266577566', 10191, NULL, NULL, NULL, NULL, NULL, '17:07:56');
 
 -- --------------------------------------------------------
 
@@ -589,7 +597,7 @@ INSERT INTO `record` (`Personal_ID`, `BookId`, `Date_of_Issue`, `Due_Date`, `Dat
 CREATE TABLE `renew` (
   `Personal_ID` varchar(50) NOT NULL,
   `BookId` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `renew`
@@ -609,7 +617,7 @@ INSERT INTO `renew` (`Personal_ID`, `BookId`) VALUES
 CREATE TABLE `return` (
   `Personal_ID` varchar(50) NOT NULL,
   `BookId` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `return`
@@ -632,7 +640,7 @@ CREATE TABLE `user` (
   `EmailId` varchar(50) DEFAULT NULL,
   `MobNo` bigint(11) DEFAULT NULL,
   `Password` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `user`
@@ -645,6 +653,14 @@ INSERT INTO `user` (`Personal_ID`, `Name`, `Gender`, `Type`, `EmailId`, `MobNo`,
 ('FC1165587969', 'Intisar Tahmeed', 'Male', 'Faculty Member', 'intisar@oharamail.com', 1769654294, 'FC1165587969'),
 ('FC1177557664', 'Nasrin Akhtar', 'Female', 'Faculty Member', 'nasrin@oharamail.com', 1884654264, 'FC1177557664'),
 ('FC1189347565', 'Eshrat Jahan', 'Female', 'Faculty Member', 'eshrat@oharamail.com', 1887664264, 'FC1189347565'),
+('FC2077557664', 'Nowrin Jamia', 'Female', 'Faculty Member', 'nowrin@oharamail.com', 1800654264, 'FC2077557664'),
+('FC2089347565', 'Adrita Jahan', 'Female', 'Faculty Member', 'adrita@oharamail.com', 1800664264, 'FC2089347565'),
+('FC2164587868', 'Mushfiq Shubho', 'Male', 'Faculty Member', 'mushfiqsh@oharamail.com', 1700684264, 'FC2164587868'),
+('FC2165587969', 'Iftekhar Tahmeed', 'Male', 'Faculty Member', 'iftekhartahtah@oharamail.com', 1700654294, 'FC2165587969'),
+('FC2256567763', 'Nafees Mahmud', 'Male', 'Faculty Member', 'nafees@oharamail.com', 1760044264, 'FC2256567763'),
+('LB0000000001', 'Moto Moto', 'Male', 'Librarian', 'motomoto@oharamail.com', 1298218956, 'LB0000000001'),
+('LB1034860562', 'Salina Mehzabeen', 'Female', 'Librarian', 'salinameh@oharamail.com', 1806664264, 'LB1034860562'),
+('LB1086579562', 'Altaf Chowdhury', 'Male', 'Librarian', 'Altafch@oharamail.com', 1887600264, 'LB1086579562'),
 ('SF1234860562', 'Salina Shimu', 'Female', 'Staff', 'salina@oharamail.com', 1887664264, 'SF1234860562'),
 ('SF1286579562', 'Raju Alam', 'Male', 'Staff', 'raju@oharamail.com', 1887664264, 'SF1286579562'),
 ('ST1116587562', 'Shoeb Hassan', 'Male', 'Student', 'shoeb@oharamail.com', 1687654264, 'ST1116587562'),
@@ -682,7 +698,37 @@ INSERT INTO `user` (`Personal_ID`, `Name`, `Gender`, `Type`, `EmailId`, `MobNo`,
 ('ST1716587562', 'Khabib Yadud', 'Male', 'Student', 'khabib@oharamail.com', 1878854264, 'ST1616587562'),
 ('ST1721587642', 'Nafiz Haider Chowdhury', 'Male', 'Librarian', 'nafiz@oharamail.com', 1779486666, 'ST1721587642'),
 ('ST1816587562', 'Nabib Raftar', 'Male', 'Student', 'nabib@oharamail.com', 1617654264, 'ST1816587562'),
-('ST1916587562', 'Habib Bahar', 'Male', 'Student', 'habibb@oharamail.com', 1627454264, 'ST1916587562');
+('ST1916587562', 'Habib Bahar', 'Male', 'Student', 'habibb@oharamail.com', 1627454264, 'ST1916587562'),
+('ST2014563782', 'Hasib Jessan', 'Male', 'Student', 'hasibjes@oharamail.com', 1887600264, 'ST2014563782'),
+('ST2016587562', 'Nobel Hassan', 'Male', 'Student', 'nobelha@oharamail.com', 1687874264, 'ST2016587562'),
+('ST2016887262', 'Sakib Rafsan', 'Male', 'Student', 'sakibraf@oharamail.com', 1787604264, 'ST1216887262'),
+('ST2056587562', 'Sakib Mazumdar', 'Male', 'Student', 'sakibmz@oharamail.com', 1667850404, 'ST2056587562'),
+('ST2066587562', 'Shakib Ahmed', 'Male', 'Student', 'shakibah@oharamail.com', 1670650264, 'ST2066587562'),
+('ST2076577565', 'Ittesaf Chowdhury', 'Male', 'Student', 'ittesafch@oharamail.com', 1708054264, 'ST2076577565'),
+('ST2086557560', 'Jamea Eshrat', 'Female', 'Student', 'jameaesh@oharamail.com', 1639650264, 'ST2086557560'),
+('ST2086557569', 'Fardeena Alam', 'Female', 'Student', 'fardeenalam@oharamail.com', 1319004264, 'ST2086557569'),
+('ST2086567560', 'Faria Islami', 'Female', 'Student', 'fariaislam5@oharamail.com', 1520704264, 'ST2086567560'),
+('ST2116488572', 'Sohel Yahsan', 'Male', 'Student', 'sohelyah@oharamail.com', 1987050224, 'ST2116488572'),
+('ST2116555262', 'Roheb Bahar', 'Male', 'Student', 'rohebahar@oharamail.com', 1780054265, 'ST2116555262'),
+('ST2116587562', 'Nabib Arafat', 'Male', 'Student', 'nabibar@oharamail.com', 1617604654, 'ST2116587562'),
+('ST2116677562', 'Khabib Sherafat', 'Male', 'Student', 'khabibsh@oharamail.com', 1876055264, 'ST2116677562'),
+('ST2116987562', 'Rezwan Yahsan', 'Male', 'Student', 'rezwanya@oharamail.com', 1380054263, 'ST2116987562'),
+('ST2126577566', 'Iftekhar Jamil', 'Male', 'Student', 'ifjamil@oharamail.com', 1809604264, 'ST2126577566'),
+('ST2126587562', 'Labib Chowdhury', 'Male', 'Student', 'labibch@oharamail.com', 1637300264, 'ST2126587562'),
+('ST2146587562', 'Shabib Mazumdar', 'Male', 'Student', 'shabibmz@oharamail.com', 1657004264, 'ST2146587562'),
+('ST2156577567', 'Sheikh Nahid', 'Male', 'Student', 'shnahid@oharamail.com', 158660264, 'ST2156577567'),
+('ST2176587562', 'Sabbir Ahmed', 'Male', 'Student', 'sabbirah@oharamail.com', 1307754064, 'ST2176587562'),
+('ST2186567569', 'Konika Mahboob', 'Female', 'Student', 'konikamb@oharamail.com', 1749550264, 'ST2186567569'),
+('ST2186577564', 'Irin Akhtar', 'Female', 'Student', 'irinak@oharamail.com', 1609604264, 'ST2186577564'),
+('ST2186577565', 'Chaiti Ahmed', 'Female', 'Student', 'chaititt@oharamail.com', 1509570264, 'ST2186577565'),
+('ST2186577567', 'Sana Sanzida Jahan', 'Female', 'Student', 'sanasanja@oharamail.com', 1969554264, 'ST2186577567'),
+('ST2216587562', 'Habib Chowdhury', 'Male', 'Student', 'habibch@oharamail.com', 1627400264, 'ST2216587562'),
+('ST2236587562', 'Fahib Mazumdar', 'Male', 'Student', 'fahibmz@oharamail.com', 1647250064, 'ST2236587562'),
+('ST2266577566', 'Ashraf Chowdhury', 'Male', 'Student', 'ashrafch@oharamail.com', 1600654264, 'ST2266577566'),
+('ST2286577563', 'Faizah Jahan', 'Female', 'Student', 'faizahjh@oharamail.com', 1304654264, 'ST2286577563'),
+('ST2286577568', 'Sabrina Mahboob', 'Female', 'Student', 'sabrinamb@oharamail.com', 1809054264, 'ST2286577568'),
+('ST2286578566', 'Sumaiya Esrat', 'Female', 'Student', 'sumaiyaes@oharamail.com', 1709054264, 'ST2286578566'),
+('ST2286587569', 'Mushfiqul Ahmed', 'Male', 'Student', 'mushfiqulah@oharamail.com', 1497654264, 'ST2286587569');
 
 --
 -- Indexes for dumped tables
@@ -756,7 +802,7 @@ ALTER TABLE `book`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `M_Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `M_Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT for table `recommendations`
