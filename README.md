@@ -74,10 +74,6 @@
 │   │   ├── return_requests.php 
 │   │   ├── userdetails.php 
 │   │   └── users.php 
-│   ├── css
-│   │   └── style.css
-│   ├── images
-│   │   └── logo.png
 │   ├── staff
 │   │   ├── bootstrap
 │   │   │   ├── css
@@ -144,8 +140,16 @@
 │   │   └── return_request.php
 │   ├── about.html
 │   ├── dbconn.php
-│   └── index.php
+│   ├── index.php
+│   └──style.css
+├── Project Proposal
+│   └── Project Proposal & Requirment Analysis.pdf
+├── Project Report
+│   ├── Project Report.pdf
+│   └── User Manual (SnapShots).pdf
 ├── Screenshots
+│   ├── 0. Front (SignIn-SignUp) Page.png
+│   └──
 ├── LICENSE
 └── README.md
 
