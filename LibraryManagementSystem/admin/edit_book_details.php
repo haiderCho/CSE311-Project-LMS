@@ -145,11 +145,12 @@ if ($_SESSION['Personal_ID']) {
                                         <input type="text" id="Availability" name="Availability"
                                                value="<?php echo $avail ?>" class="span8" required>
                                     </div>
-                                </div>
+                                </div> 
 
                                 <div class="control-group">
                                     <div class="controls">
                                         <button type="submit" name="submit" class="btn">Update Details</button>
+                                        <button type="remove" name="remove" class="btn">Remove Book</button>
                                     </div>
                                 </div>
 
@@ -187,7 +188,18 @@ if ($_SESSION['Personal_ID']) {
         $sql1 = "update LMS.book set Title='$name', Genre='$Genre', Year='$year', Availability='$avail' where BookId='$bookid'";
         // $sql2="update LMS.genre set Genre='$genre' where BookId='$bookid'";
 
-        if ($conn->query($sql1) && $conn->query(sql2) === TRUE) {
+        if ($conn->query($sql1) === TRUE) {
+            echo "<script type='text/javascript'>alert('Success')</script>";
+            header("Refresh:0.01; url=book.php", true, 303);
+        } else {
+            //echo $conn->error;
+            echo "<script type='text/javascript'>alert('Error')</script>";
+        }
+    } else  if (isset($_POST['remove'])) {
+        $sql2 = "DELETE FROM LMS.author WHERE author.BookId='$bookid'";
+        $sql3 = "DELETE FROM LMS.book WHERE book.BookId='$bookid'";
+
+        if ($conn->query($sql2) && $conn->query($sql3) === TRUE) {
             echo "<script type='text/javascript'>alert('Success')</script>";
             header("Refresh:0.01; url=book.php", true, 303);
         } else {

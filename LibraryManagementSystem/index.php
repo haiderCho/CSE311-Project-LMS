@@ -9,12 +9,13 @@ require('dbconn.php');
 <head>
     <title>The Library of Ohara</title>
    
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all"> <!-- Style -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="all"> <!-- Style -->
     
     <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <!-- /Fonts -->
 </head> <!-- Head -->
 
