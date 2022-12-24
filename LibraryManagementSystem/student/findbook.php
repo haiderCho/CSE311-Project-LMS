@@ -68,6 +68,23 @@ if ($_SESSION['Student_ID']) {
                         <!--/.sidebar-->
                     </div>
                     <!--/.span3-->
+                    
+                    <div class="span9">
+
+                        <div class="content">
+                            <div class="btn-controls">
+                                <div class="btn-box-row row-fluid">
+                                    <a href="findbook.php" class="btn-box big span4"><i class=" icon-search"></i><b>Find Book</b>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--/.module-->
+                        </div>
+                        
+                        <!--/.content-->
+                    </div>
+                
+                    <!--/.span9-->
                 </div>
             </div>
             <!--/.container-->
@@ -77,8 +94,18 @@ if ($_SESSION['Student_ID']) {
                 <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
             </div>
         </div>
+        
         <!--/.wrapper-->
+        <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
+        <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
+        <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
+        <script src="scripts/common.js" type="text/javascript"></script>
+      
     </body>
+
 </html>
 
 <?php }
