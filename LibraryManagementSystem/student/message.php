@@ -67,7 +67,40 @@ if ($_SESSION['Personal_ID']) {
                         </div>
                         <!--/.sidebar-->
                     </div>
-                   
+                    <div class="span9">
+                        <table class="table" id = "tables">
+                                  <thead>
+                                    <tr>
+                                      <th>Message</th>
+                                      <th>Date</th>
+                                      <th>Time</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <?php
+                                    $Personal_ID=$_SESSION['Personal_ID'];
+                            $sql="select * from LMS.message where Personal_ID='$Personal_ID' order by Date DESC,Time DESC";
+                            $result=$conn->query($sql);
+                            while($row=$result->fetch_assoc())
+                            {
+                                $msg=$row['Msg'];
+                                $date=$row['Date'];
+                                $time=$row['Time'];
+                            
+                           
+                            ?>
+                                    <tr>
+                                      <td><?php echo $msg ?></td>
+                                      <td><?php echo $date ?></td>
+                                      <td><?php echo $time ?></td>
+                                    </tr>
+                               <?php } ?>
+                               </tbody>
+                                </table>
+                            </div>
+                    <!--/.span3-->
+                    
+                    <!--/.span9-->
                 </div>
             </div>
             <!--/.container-->
@@ -77,8 +110,18 @@ if ($_SESSION['Personal_ID']) {
                 <b class="copyright">&copy; 2022 Ohara Library Management System. </b>All rights reserved.
             </div>
         </div>
+        
         <!--/.wrapper-->
+        <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
+        <script src="scripts/flot/jquery.flot.resize.js" type="text/javascript"></script>
+        <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
+        <script src="scripts/common.js" type="text/javascript"></script>
+      
     </body>
+
 </html>
 
 <?php }
