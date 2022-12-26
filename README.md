@@ -14,7 +14,7 @@
 ## 📚 Features
 
 - SignIn/SignUp
-- Librarian: Add Book, Edit Book info, Send Message
+- Librarian: Add Book, Edit Book info, Remove Book, Send Message
 - Faculty Member/Staff: Borrow Book, Return Book, Recommend Book
 - Student: Borrow Book, Return Book
 
